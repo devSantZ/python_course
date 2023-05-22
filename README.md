@@ -2,7 +2,7 @@
 
 # Curso de Python
 
-Este é um repositório para um curso de Python que eu estou ministrando. Aqui você encontrará as aulas, exercícios e exemplos de código do curso do Luís Otávio Miranda na UDEMY.
+Este é um repositório para um curso de Python que eu estou fazendo. Aqui você encontrará as aulas, exercícios e exemplos de código do curso do Luís Otávio Miranda na UDEMY.
 
 ## Conteúdo
 
@@ -13,6 +13,8 @@ Introdução ao Python (Lógica de Programação)
     - aulas
     - exercicios
     - test
+
+Python Intermediário
 - Sessão 2: 
     - aulas
     - exercicios
@@ -20,13 +22,13 @@ Introdução ao Python (Lógica de Programação)
 
 Conforeme avanço no curso adicionarei mais sessões!
 
-Cada módulo contém uma pasta com as aulas e exercícios correspondentes. Além disso, há uma pasta "exemplos" que contém alguns exemplos de código para fins de referência.
+Cada módulo contém uma pasta com as aulas e exercícios correspondentes. Além disso, há uma pasta "testes" (ainda não incluso) que contém alguns exemplos de código para fins de referência.
 
 ## Como Usar
 
 Para usar este repositório, basta cloná-lo em sua máquina local e navegar até a pasta correspondente ao módulo que você deseja estudar. Dentro de cada pasta de módulo, você encontrará uma pasta "aulas" e uma pasta "exercícios".
 
-As aulas estão disponíveis em formato de texto. Os exercícios são apresentados em formato de arquivo Python, que você deve preencher e salvar com as soluções correspondentes.
+Os arquivos estão disponíveis em formato de código. Os exercícios são apresentados em formato de arquivo Python, que você deve preencher e salvar com as soluções correspondentes.
 
 ## Contribuição
 
@@ -41,3 +43,7 @@ Agradeço a todos que se interessam pelo conteúdo disponibilizado e espero que 
 - Email: osantz.dev@gmail.com
 - Twitter: @DIEGO03816659
 - LinkedIn: in/devdiegosantos/
+
+## Licença
+
+O projeto está licenciado sob a [luizomf](https://github.com/luizomf).
