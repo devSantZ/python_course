@@ -15,6 +15,14 @@ iterador: Um iterador é um objeto que representa um estado de
     retorna o próprio objeto iterador, enquanto o método 
     __next__() retorna o próximo elemento da sequência.
 """
+import sys
+
+
+lista = [i for i in range(1000)]
+gerador = (n for n in range(1000))
+
+print(sys.getsizeof(lista))
+print(sys.getsizeof(gerador))
 
 
 def iterador(x):
