@@ -1,49 +1,47 @@
+# Python Course
 
+This is a repository for a Python course that I am taking. Here you will find the lessons, exercises, and code examples from Luís Otávio Miranda's course on UDEMY.
 
-# Curso de Python
+## Contents
 
-Este é um repositório para um curso de Python que eu estou fazendo. Aqui você encontrará as aulas, exercícios e exemplos de código do curso do Luís Otávio Miranda na UDEMY.
+The course is divided into different sections, each with its own set of lessons and exercises. The current content includes:
 
-## Conteúdo
+Introduction to Python (Programming Logic)
+- Section 1:
+    - Lessons
+    - Exercises
+    - Test
 
-O curso está dividido em diferentes sessões e cada um com seu próprio conjunto de aulas e exercícios. O conteúdo atual inclui:
+Intermediate Python
+- Section 2:
+    - Lessons
+    - Exercises
+    - Test
 
-Introdução ao Python (Lógica de Programação)
-- Sessão 1: 
-    - aulas
-    - exercicios
-    - test
+As I progress in the course, I will add more sections!
 
-Python Intermediário
-- Sessão 2: 
-    - aulas
-    - exercicios
-    - test
+Each module contains a folder with the corresponding lessons and exercises. Additionally, there is a "tests" folder (not included yet) that contains some code examples for reference purposes.
 
-Conforeme avanço no curso adicionarei mais sessões!
+## How to Use
 
-Cada módulo contém uma pasta com as aulas e exercícios correspondentes. Além disso, há uma pasta "testes" (ainda não incluso) que contém alguns exemplos de código para fins de referência.
+To use this repository, simply clone it to your local machine and navigate to the folder corresponding to the module you want to study. Inside each module folder, you will find a "lessons" folder and an "exercises" folder.
 
-## Como Usar
+The files are available in code format. The exercises are presented as Python files that you should fill in and save with the corresponding solutions.
 
-Para usar este repositório, basta cloná-lo em sua máquina local e navegar até a pasta correspondente ao módulo que você deseja estudar. Dentro de cada pasta de módulo, você encontrará uma pasta "aulas" e uma pasta "exercícios".
+## Contribution
 
-Os arquivos estão disponíveis em formato de código. Os exercícios são apresentados em formato de arquivo Python, que você deve preencher e salvar com as soluções correspondentes.
+Feel free to contribute to this repository through pull requests. If you find a bug or have a suggestion for improvement, open an issue and I will do my best to address it or implement it.
 
-## Contribuição
+## Acknowledgements
 
-Sinta-se à vontade para contribuir para este repositório por meio de pull requests. Se você encontrar um bug ou tiver uma sugestão de melhoria, abra uma issue e farei o possível para corrigi-lo ou implementá-lo.
+I would like to thank everyone who is interested in the provided content, and I hope it is helpful to you. If you have any questions, don't hesitate to contact me through the channels listed below.
 
-## Agradecimentos
-
-Agradeço a todos que se interessam pelo conteúdo disponibilizado e espero que ele seja útil para você. Se você tiver alguma dúvida, não hesite em entrar em contato comigo por meio dos canais listados abaixo.
-
-## Contato
+## Contact
 
 - Email: osantz.dev@gmail.com
 - Twitter: @DIEGO03816659
 - LinkedIn: in/devdiegosantos/
 
-## Licença
+## License
 
-O projeto está licenciado sob a [luizomf](https://github.com/luizomf).
+The project is licensed under [luizomf](https://github.com/luizomf).
