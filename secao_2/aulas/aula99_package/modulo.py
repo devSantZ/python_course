@@ -7,3 +7,4 @@ variavel = 'teste'
 
 def func_do_modulo(x, y):
     return x + y
+

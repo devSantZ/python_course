@@ -1,0 +1,55 @@
+a importação de módulos em pastas acima ou abaixo do arquivo principal (também conhecido como "main") 
+segue uma convenção específica para garantir que o interpretador encontre corretamente os módulos que 
+você deseja importar. Vamos abordar as importações de módulos em pastas acima (imports relativos) e abaixo
+ (imports absolutos) do arquivo main separadamente.
+
+Importação de módulos em pastas acima (imports relativos):
+Quando você está importando um módulo que está em uma pasta acima do arquivo main, você precisa usar 
+uma notação especial para especificar o caminho relativo do módulo em relação ao arquivo principal.
+ Isso é feito usando pontos (.) para indicar a relação com a pasta atual e pontos de interrogação (..) 
+ para indicar níveis superiores de pastas.
+
+Por exemplo, suponha que você tenha a seguinte estrutura de pastas:
+
+css
+
+├── main.py
+└── pasta1
+    └── modulo.py
+
+Se você estiver no arquivo main.py e quiser importar o módulo modulo.py, que está na pasta pasta1, 
+você pode usar a seguinte declaração de importação:
+
+python
+
+from .pasta1 import modulo
+
+O ponto inicial (.) indica que você está referenciando a pasta atual (onde o arquivo main.py está localizado), 
+e em seguida você especifica o caminho relativo para o módulo desejado.
+
+Importação de módulos em pastas abaixo (imports absolutos):
+Quando você está importando um módulo que está em uma pasta abaixo do arquivo main, você pode usar uma
+importação absoluta, especificando o caminho completo do módulo a partir da raiz do projeto.
+
+Vamos supor que você tenha a seguinte estrutura de pastas:
+
+css
+
+├── main.py
+└── pasta1
+    └── pasta2
+        └── modulo.py
+
+Se você estiver no arquivo main.py e quiser importar o módulo modulo.py, que está na pasta pasta2, você 
+pode usar a seguinte declaração de importação:
+
+python
+
+from pasta1.pasta2 import modulo
+
+Nesse caso, você especifica o caminho completo do módulo a partir da raiz do projeto, separando as pastas com pontos.
+
+É importante mencionar que, a partir do Python 3, os imports relativos foram desencorajados em favor dos 
+imports absolutos, que fornecem um mecanismo mais claro e previsível para importar módulos em pastas abaixo do arquivo main. 
+No entanto, a escolha entre importações relativas ou absolutas depende da estrutura do seu projeto e da compatibilidade com 
+versões anteriores, se necessário.
