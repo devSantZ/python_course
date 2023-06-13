@@ -28,7 +28,7 @@ def acrescenta_10_por_cento():
 
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 def ordena_por_nome():
-    produtos_ordenados_por_nome = sorted(copy.deepcopy(produtos), key=lambda x: x['nome'])
+    produtos_ordenados_por_nome = sorted(copy.deepcopy(produtos), reverse=True, key=lambda x: x['nome'])
     return produtos_ordenados_por_nome
 
 
