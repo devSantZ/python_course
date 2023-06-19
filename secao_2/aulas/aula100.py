@@ -38,3 +38,15 @@ teste = valor_inicial(10)
 print(teste(4))
 print(teste(1))
 print(teste(32))
+
+# def palavra(palavra):
+#     valor1 = palavra
+#     def concatenada(outra_palavra):
+#         nonlocal valor1
+#         valor1 += outra_palavra
+#         return valor1
+#     return concatenada
+
+
+# test = palavra('teste')
+# print(test(' 123'))
