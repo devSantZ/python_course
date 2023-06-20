@@ -26,8 +26,7 @@ def e_string(valor):
 def inverte(valor):
     return valor[::-1]
 
-
-invertida = inverte(11)
+invertida = inverte('olá')
 print(invertida)
 
 
@@ -35,15 +34,18 @@ print(invertida)
 def is_positive_or_negative(func):
     def inner(*args, **kwargs):
         result = func(*args, **kwargs)
-        if result > 0:
-            return f'{result} É um numero positivo'
-        return'{result} É um numero negativo'
+        for i in result:
+            if i > 0:
+                print(f'{i} É um numero positivo')
+            else:
+                print(f'{i} É um numero negativo')
+        return f''
     return inner
 
 
 @is_positive_or_negative
-def receive_number(n):
-    return n
+def receive_number(*args):
+    return list(args)
 
 
-print(receive_number(12))
+print(receive_number(12, 1, 4, -4, -34, 2))
