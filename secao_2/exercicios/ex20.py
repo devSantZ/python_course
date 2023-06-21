@@ -1,10 +1,6 @@
 from itertools import zip_longest
 
 
-
-
-
-
 z = []
 
 def lists_to_zip(x, y):
