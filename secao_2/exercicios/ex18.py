@@ -17,6 +17,7 @@ produtos = [
 print(*produtos, sep='\n')
 print(' ',34 * '=')
 
+
 # (x) Aumente os preços dos produtos a seguir em 10% 
 def acrescenta_10_por_cento():
     novos_produtos = [
@@ -36,9 +37,7 @@ def ordena_por_nome():
 
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
 def ordena_por_preco():  
-    produtos_ordenados_por_preco = sorted(copy.deepcopy(produtos),
-    key=lambda x: x['preco']
-    )
+    produtos_ordenados_por_preco = sorted(copy.deepcopy(produtos), key=lambda x: x['preco'])
     return produtos_ordenados_por_preco
 
 
