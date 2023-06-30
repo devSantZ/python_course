@@ -21,3 +21,4 @@ divide_por_2 = exec(divide, 2)
 
 print(soma_com_cinco(2))
 print(divide_por_2(10))
+
