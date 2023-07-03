@@ -3,6 +3,7 @@ from itertools import zip_longest
 
 z = []
 
+
 def lists_to_zip(x, y):
     def inner_function(func):
         def wapper(*args, **kwargs):
@@ -17,7 +18,7 @@ def zipper():
     pass
 
 
-print(zipper())
+print(*zipper())
 
 # Solução do professor
 # def zipper(x, y):

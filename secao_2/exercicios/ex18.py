@@ -15,13 +15,13 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 print(*produtos, sep='\n')
-print(' ',34 * '=')
+print(' ', 34 * '=')
 
 
 # (x) Aumente os preços dos produtos a seguir em 10% 
 def acrescenta_10_por_cento():
     novos_produtos = [
-        {**produto, 'preco': round(produto['preco'] * (1 + 10/ 100), 2)} 
+        {**produto, 'preco': round(produto['preco'] * (1 + 10 / 100), 2)}
         for produto in produtos
     ]
     return copy.deepcopy(novos_produtos)
@@ -29,9 +29,7 @@ def acrescenta_10_por_cento():
 
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 def ordena_por_nome():
-    produtos_ordenados_por_nome = sorted(copy.deepcopy(produtos),
-    reverse=True, key=lambda x: x['nome']
-    )
+    produtos_ordenados_por_nome = sorted(copy.deepcopy(produtos), reverse=True, key=lambda x: x['nome'])
     return produtos_ordenados_por_nome
 
 
@@ -47,7 +45,7 @@ if __name__ == "__main__":
     ordena_preco = ordena_por_preco()
     
     print(*aumenta_preco, sep='\n')
-    print(' ',34 * '=')
-    print(*ordena_nome,sep = '\n')
-    print(' ',34 * '=')
-    print(*ordena_preco, sep = '\n')
+    print(' ', 34 * '=')
+    print(*ordena_nome, sep='\n')
+    print(' ', 34 * '=')
+    print(*ordena_preco, sep='\n')
