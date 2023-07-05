@@ -1,0 +1,63 @@
+O venv é um módulo do Python que permite criar ambientes virtuais isolados para
+desenvolvimento de projetos. Um ambiente virtual é uma cópia autônoma do
+interpretador do Python, juntamente com uma biblioteca padrão e quaisquer
+pacotes adicionais instalados, que podem ser gerenciados de forma independente
+dos outros ambientes virtuais e do ambiente global do sistema.
+
+Aqui estão os passos básicos para utilizar o venv:
+
+1. Criação de um ambiente virtual: Para criar um ambiente virtual, você pode
+   executar o seguinte comando no terminal:
+
+   python -m venv nome_do_ambiente
+
+   Isso criará um diretório com o nome especificado (nome_do_ambiente, por
+   exemplo), contendo os arquivos do ambiente virtual.
+
+2. Ativação do ambiente virtual: Após criar o ambiente virtual, você precisa
+   ativá-lo. A ativação difere dependendo do sistema operacional:
+
+   - No Windows, execute o comando abaixo no terminal:
+
+     nome_do_ambiente\Scripts\activate
+
+   - No macOS e Linux, execute o comando abaixo no terminal:
+
+     source nome_do_ambiente/bin/activate
+
+   Após ativar o ambiente virtual, o prompt do terminal será atualizado com o
+   nome do ambiente entre parênteses.
+
+3. Instalação de pacotes: Agora você pode instalar pacotes no ambiente virtual
+   ativado usando o pip, da mesma forma que faria em um ambiente global. Por
+   exemplo:
+
+   pip install pacote
+
+4. Desativação do ambiente virtual: Quando terminar de trabalhar com o ambiente
+   virtual, você pode desativá-lo executando o seguinte comando no terminal:
+
+   deactivate
+
+Aqui está um exemplo prático para criar e usar um ambiente virtual:
+
+1. Criação do ambiente virtual:
+
+   python -m venv meu_ambiente
+
+2. Ativação do ambiente virtual (Windows):
+
+   meu_ambiente\Scripts\activate
+
+3. Instalação de pacotes:
+
+   pip install requests
+
+4. Desativação do ambiente virtual:
+
+   deactivate
+
+Ao utilizar o venv, você pode criar ambientes virtuais separados para
+diferentes projetos, cada um com suas próprias dependências, sem interferir no
+ambiente global do sistema. Isso permite que você mantenha um ambiente de
+desenvolvimento limpo e evite conflitos entre pacotes de diferentes projetos.
