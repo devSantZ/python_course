@@ -1,5 +1,4 @@
 .env
 .idea
 tests
-venv
 __pycache__
