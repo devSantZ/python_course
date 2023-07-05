@@ -1,0 +1,17 @@
+A call stack, também conhecida como pilha de chamadas, é uma estrutura de dados usada pela maioria das linguagens de
+programação para controlar a execução de funções. Quando uma função é chamada, um novo quadro (frame) é adicionado ao
+topo da pilha, contendo informações como os parâmetros da função e o ponto de retorno para a função chamadora. Quando
+a função termina sua execução, seu quadro é removido da pilha e o controle retorna à função chamadora.
+
+Quando se trata de funções recursivas, ocorre uma chamada a si mesma dentro do corpo da função. Essas chamadas
+adicionais são colocadas no topo da pilha de chamadas, empilhando frames adicionais. A recursão continua até
+que uma condição de parada seja alcançada, momento em que as chamadas recursivas começam a ser desempilhadas
+e os frames são removidos da pilha.
+
+O limite de call stack, também conhecido como limite de recursão, é a quantidade máxima de frames que a pilha de
+chamadas pode acomodar antes de atingir seu limite máximo. Quando esse limite é ultrapassado, ocorre o que é conhecido
+como "estouro de pilha" (stack overflow), resultando em uma exceção ou erro no programa.
+
+Esse limite varia de acordo com a linguagem de programação e a plataforma em que o código está sendo executado. Em geral,
+linguagens de programação de alto nível tendem a ter limites de call stack mais baixos do que linguagens de baixo nível.
+Além disso, o limite também pode ser configurado ou ajustado pelo ambiente de execução.
