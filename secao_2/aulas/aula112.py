@@ -103,23 +103,22 @@ with open(caminho_arquivo, 'r') as arquivo:
 # os.rename(caminho_arquivo, 'aula113.txt') renomea o arquivo
 
 
-# from time import sleep
-#
-# path_file = "aula112.txt"
-#
-#
-# def open_file():
-#     try:
-#         with open(path_file, 'r') as way:
-#             print('ok, arquivo criado')
-#         return
-#     except:
-#         with open(path_file, 'w') as way:
-#             print('Criando o arquivo')
-#             sleep(2)
-#         return open_file()
-#
-#
-# open_file()
+from time import sleep
 
+path_file = "aula112.txt"
+
+
+def open_file():
+    try:
+        with open(path_file, 'r') as way:
+            print('ok, arquivo criado')
+        return
+    except:
+        with open(path_file, 'w') as way:
+            print('Criando o arquivo')
+            sleep(2)
+        return open_file()
+
+
+open_file()
 
