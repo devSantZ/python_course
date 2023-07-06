@@ -1,0 +1,37 @@
+Abrindo um arquivo em modo de escrita ('w')
+with open('exemplo.txt', 'w') as arquivo:
+    # Escrevendo no arquivo utilizando o método write()
+    arquivo.write('Olá, mundo!\n')
+    arquivo.write('Este é um exemplo de manipulação de arquivos em Python.\n')
+    arquivo.write('Vamos explorar algumas funcionalidades.\n')
+
+    # Utilizando o método writelines() para escrever várias linhas de uma vez
+    linhas = ['Esta é a linha 4.\n', 'Esta é a linha 5.\n', 'Esta é a linha 6.\n']
+    arquivo.writelines(linhas)
+
+    # Movendo o cursor para o início do arquivo utilizando o método seek()
+    arquivo.seek(0)
+
+    # Lendo todo o conteúdo do arquivo utilizando o método read()
+    conteudo = arquivo.read()
+    print('Conteúdo do arquivo:\n', conteudo)
+
+    # Movendo o cursor para o início do arquivo novamente
+    arquivo.seek(0)
+
+    # Lendo uma linha do arquivo utilizando o método readline()
+    linha1 = arquivo.readline()
+    print('Linha 1:', linha1)
+
+    # Lendo todas as linhas do arquivo utilizando o método readlines()
+    linhas = arquivo.readlines()
+    print('Linhas restantes:\n', linhas)
+
+# Exemplos de uso do módulo os para manipulação de arquivos
+import os
+
+# Apagando o arquivo utilizando o método remove() do módulo os
+os.remove('exemplo.txt')
+
+# Renomeando um arquivo utilizando o método rename() do módulo os
+os.rename('exemplo.txt', 'novo_nome.txt')
