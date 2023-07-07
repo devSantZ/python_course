@@ -1,0 +1,36 @@
+[
+  {
+    "firstname": "Diego",
+    "lastname": "Santos",
+    "age": 22,
+    "email": "diego@gmail.com",
+    "addresses": [
+      {
+        "line1": "Sao Paulo"
+      },
+      {
+        "line2": "Rio de Janeiro"
+      },
+      {
+        "line3": "Santa Catarina"
+      }
+    ]
+  },
+  {
+    "firstname": "Marta",
+    "lastname": "Pereira",
+    "age": 15,
+    "email": "marta@gmail.com",
+    "addresses": [
+      {
+        "line1": "Brasilia"
+      },
+      {
+        "line2": "Maranhao"
+      },
+      {
+        "line3": "parana"
+      }
+    ]
+  }
+]
