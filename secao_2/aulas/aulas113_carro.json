@@ -1,0 +1,13 @@
+{
+  "marca": "BMW",
+  "modelo": "BMW 220 IA TOURER 2.0 turbo active flex",
+  "tipo": "SUV",
+  "ano": "2016",
+  "quilometragem": 70000,
+  "potencia": "2.9",
+  "combustivel": "flex",
+  "cor": "branca",
+  "portas": 4,
+  "cambio": "automatico",
+  "direcao": "hidraulica"
+}
