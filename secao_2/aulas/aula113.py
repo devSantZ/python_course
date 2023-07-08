@@ -94,7 +94,7 @@ carro = {
 }
 
 with open(SAVE_TO, 'w') as file:
-    json.dump(carro, file, indent=2)
+    json.dump(carro, file, indent=2, ensure_ascii=False)  # ensure_ascii false exibe caracteres especiais   
     
 with open(SAVE_TO, 'r') as file:
     print(json.load(file))
