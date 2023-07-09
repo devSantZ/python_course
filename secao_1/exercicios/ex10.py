@@ -1,12 +1,12 @@
 import os
 
 print('Dica: É uma MARCA!!!')
-palavra_secreta = 'TOYOTA'
+palavra_secreta = 'TOYOTA'.upper()
 letras_acertadas = ''
 tentativas = 5
 
 while True:
-    letra_digitada = input('Digite uma letra: ')
+    letra_digitada = input('Digite uma letra: ').upper()
 
     if letra_digitada == '' or letra_digitada == ' ':
         print('Por favor insira um caractere válido!')
