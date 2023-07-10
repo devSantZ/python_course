@@ -6,7 +6,6 @@ lista_de_compra = []
  
  
 while True:
- 
     #entrada do usuário
     entrada = input('[i]nseir [a]pagar [l]]istar: ').lower()
  
