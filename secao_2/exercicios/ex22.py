@@ -10,54 +10,54 @@ desfazer = [] -> Refazer ['caminhar', 'fazer café']
 refazer = todo ['fazer café']
 refazer = todo ['fazer café', 'caminhar']
 """
-    import os
+import os
 
-    lista_de_tarefas = []
-    lista_de_tarefas_refeitas = []
+lista_de_tarefas = []
+lista_de_tarefas_refeitas = []
 
-    def limpar():
-        return os.system('clear')
-
-
-    def exibir_tarefas():
-        if len(lista_de_tarefas) == 0:
-            print('Nada para listar')
-            return
-        for i in lista_de_tarefas:
-            print(i)
+def limpar():
+    return os.system('clear')
 
 
-    def desfazer():
-        if len(lista_de_tarefas) == 0:
-            return
-        lista_de_tarefas_refeitas.append(lista_de_tarefas[-1])
-        lista_de_tarefas.pop()
-        return lista_de_tarefas_refeitas
+def exibir_tarefas():
+    if len(lista_de_tarefas) == 0:
+        print('Nada para listar')
+        return
+    for i in lista_de_tarefas:
+        print(i)
 
 
-    def refazer():
-        if len(lista_de_tarefas) == 0:
-            return
-        var = lista_de_tarefas_refeitas[-1]
-        return lista_de_tarefas.append(var)
+def desfazer():
+    if len(lista_de_tarefas) == 0:
+        return
+    lista_de_tarefas_refeitas.append(lista_de_tarefas[-1])
+    lista_de_tarefas.pop()
+    return lista_de_tarefas_refeitas
 
 
-    if __name__ == '__main__':
-        while True:
-            print('Comandos: listar, desfazer, refazer')
-            entrada_usuario = input('Digite uma tarefa ou comando: ').lower()
+def refazer():
+    if len(lista_de_tarefas) == 0:
+        return
+    var = lista_de_tarefas_refeitas[-1]
+    return lista_de_tarefas.append(var)
 
-            if entrada_usuario == 'listar':
-                exibir_tarefas()
 
-            elif entrada_usuario == 'desfazer':
-                desfazer()
+if __name__ == '__main__':
+    while True:
+        print('Comandos: listar, desfazer, refazer')
+        entrada_usuario = input('Digite uma tarefa ou comando: ').lower()
 
-            elif entrada_usuario == 'refazer':
-                refazer()
+        if entrada_usuario == 'listar':
+            exibir_tarefas()
 
-            elif entrada_usuario == 'clear':
-                limpar()
+        elif entrada_usuario == 'desfazer':
+            desfazer()
 
-            else:
-                lista_de_tarefas.append(entrada_usuario)
+        elif entrada_usuario == 'refazer':
+            refazer()
+
+        elif entrada_usuario == 'clear':
+            limpar()
+
+        else:
+            lista_de_tarefas.append(entrada_usuario)
