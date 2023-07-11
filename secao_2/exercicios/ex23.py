@@ -1,64 +1,94 @@
-"""
-salvando tarefas em um arquivo json
-"""
-
-import os
 import json
+import os
 
 BASE_DIR = os.path.dirname(__file__)
 SAVE_TO = os.path.join(BASE_DIR, 'lista_tarefa.json')
 
-lista_de_tarefas = []
-lista_de_tarefas_refeitas = []
 
-def limpar():
-    return os.system('clear')
-
-
-def exibir_tarefas():
-    if len(lista_de_tarefas) == 0:
-        print('Nada para listar')
-    else:
-        for i in lista_de_tarefas:
-            print(i)
-
-
-def desfazer():
-    if len(lista_de_tarefas) == 0:
+def listar(tarefas):
+    print()
+    if not tarefas:
+        print('Nenhuma tarefa para listar')
         return
-    lista_de_tarefas_refeitas.append(lista_de_tarefas.pop())
-    with open(SAVE_TO, 'r') as file:
-        data = json.load(file)
-        x = data.pop()
-        return x
+
+    print('Tarefas:')
+    for tarefa in tarefas:
+        print(f'\t{tarefa}')
+    print()
 
 
-def refazer():
-    if len(lista_de_tarefas_refeitas) == 0:
+def desfazer(tarefas, tarefas_refazer):
+    print()
+    if not tarefas:
+        print('Nenhuma tarefa para desfazer')
         return
-    lista_de_tarefas.append(lista_de_tarefas_refeitas.pop())
+
+    tarefa = tarefas.pop()
+    print(f'{tarefa=} removida da lista de tarefas.')
+    tarefas_refazer.append(tarefa)
+    print()
+    listar(tarefas)
 
 
-def salvar_em_json():
-    with open(SAVE_TO, 'w') as file:
-        return json.dump(lista_de_tarefas, file, indent=2)
+def refazer(tarefas, tarefas_refazer):
+    print()
+    if not tarefas_refazer:
+        print('Nenhuma tarefa para refazer')
+        return
+
+    tarefa = tarefas_refazer.pop()
+    print(f'{tarefa=} adicionada na lista de tarefas.')
+    tarefas.append(tarefa)
+    print()
+    listar(tarefas)
 
 
+def adicionar(tarefa, tarefas):
+    print()
+    tarefa = tarefa.strip()
+    if not tarefa:
+        print('Você não digitou uma tarefa.')
+        return
+    print(f'{tarefa=} adicionada na lista de tarefas.')
+    tarefas.append(tarefa)
+    print()
+    listar(tarefas)
+
+
+def ler(tarefas, caminho_arquivo):
+    dados = []
+    try:
+        with open(caminho_arquivo, 'r', encoding='utf8') as arquivo:
+            dados = json.load(arquivo)
+    except FileNotFoundError:
+        print('Arquivo não existe')
+        salvar(tarefas, caminho_arquivo)
+    return dados
+
+
+def salvar(tarefas, caminho_arquivo):
+    dados = tarefas
+    with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
+        dados = json.dump(tarefas, arquivo, indent=2, ensure_ascii=False)
+    return dados
+
+
+CAMINHO_ARQUIVO = 'aula119.json'
+tarefas = ler([], SAVE_TO)
+tarefas_refazer = []
 if __name__ == '__main__':
-    comandos = {
-        'listar': exibir_tarefas,
-        'desfazer': desfazer,
-        'refazer': refazer,
-        'clear': limpar,
-    }
-
     while True:
-        salvar_em_json()
-        print('Comandos: listar, desfazer, refazer, salvar')
-        entrada_usuario = input('Digite uma tarefa ou comando: ').lower()
+        print('Comandos: listar, desfazer e refazer')
+        tarefa = input('Digite uma tarefa ou comando: ')
 
-        if entrada_usuario in comandos:
-            comandos[entrada_usuario]()
-        else:
-            lista_de_tarefas.append(entrada_usuario)
-
+        comandos = {
+            'listar': lambda: listar(tarefas),
+            'desfazer': lambda: desfazer(tarefas, tarefas_refazer),
+            'refazer': lambda: refazer(tarefas, tarefas_refazer),
+            'clear': lambda: os.system('clear'),
+            'adicionar': lambda: adicionar(tarefa, tarefas),
+        }
+        comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else \
+            comandos['adicionar']
+        comando()
+        salvar(tarefas, SAVE_TO)
