@@ -12,12 +12,17 @@ Introduction to Python (Programming Logic)
     - Exercises
     - Test
 
-Intermediate Python
+Intermediate Python (Functional Programming)
 - Section 2:
     - Lessons
     - Exercises
     - Test
-
+    - 
+Object Oriented Python (POO)
+- Section 2:
+    - Lessons
+    - Exercises
+    - Test
 As I progress in the course, I will add more sections!
 
 Each module contains a folder with the corresponding lessons and exercises. Additionally, there is a "tests" folder (not included yet) that contains some code examples for reference purposes.
