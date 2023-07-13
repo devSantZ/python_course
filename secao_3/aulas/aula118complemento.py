@@ -1,4 +1,4 @@
-# Método 1
+# Método 1 hardcode
 class Computador:
     def __init__(self):
         self.marca = 'apple'
@@ -9,7 +9,7 @@ computador1 = Computador()
 print(computador1.marca)
 
 
-# Metodo 2
+# Metodo 2 
 class Pessoa:
     def __init__(self, nome, idade):
         self.nome = nome
