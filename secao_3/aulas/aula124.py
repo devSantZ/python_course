@@ -1,6 +1,27 @@
 """
 Mantendo estados dentro da classe
+Os atributos de instância são variáveis associadas a objetos específicos criados a partir de uma classe. Cada objeto
+pode ter seus próprios valores para esses atributos, permitindo que você mantenha estados diferentes para cada instância
+da classe.
 """
+
+# Exemplo 1
+class Estado:
+    def __init__(self, total=1):
+        self.total = total
+
+    def incremantar(self, incremento):
+        self.total += incremento
+
+v1 = Estado()
+v2 = Estado()
+
+v1.incremantar(5)
+v1.incremantar(10)
+v1.incremantar(100)
+print(v1.total)
+print(v2.total)
+
 
 class Camera:
     def __init__(self, nome, filmando=False):
