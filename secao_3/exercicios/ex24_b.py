@@ -5,11 +5,12 @@ import json
 from ex24_a import SAVE_TO, Estadio
 
 
-def recuperar_json():
+def recuperar_json(i):
     with open(SAVE_TO, 'r') as file:
         data = json.load(file)
-        return data
+        estadio = Estadio(**data[i])
+    return estadio
 
 
-test = Estadio(**recuperar_json())
-print(test.nome)
+print(recuperar_json(1).nome)
+

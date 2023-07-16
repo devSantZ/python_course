@@ -1,8 +1,18 @@
-{
-  "nome": "Maracanã",
-  "capacidade": 78.838,
-  "gramado": "natural",
-  "estrutura": "moderno",
-  "localizacao": "Rio de Janeiro",
-  "arquitetura": "marcante"
-}
+[
+  {
+    "nome": "Maracanã",
+    "capacidade": 78.838,
+    "gramado": "natural",
+    "estrutura": "moderno",
+    "localizacao": "Rio de Janeiro",
+    "arquitetura": "marcante"
+  },
+  {
+    "nome": "Pacaiambu",
+    "capacidade": 40.199,
+    "gramado": "conservado, natural",
+    "estrutura": "tradicional",
+    "localizacao": "São Paulo",
+    "arquitetura": "clássica"
+  }
+]
