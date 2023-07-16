@@ -6,6 +6,10 @@ da classe com os dados salvos
 Faça em arquivos separados.
 """
 import json
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+SAVE_TO = os.path.join(BASE_DIR, 'ex24.json')
 
 
 class Estadio:
@@ -30,7 +34,7 @@ class Estadio:
 
 
 def salvar_classe(info):
-    with open('ex24.json', 'w+') as file:
+    with open(SAVE_TO, 'w+') as file:
         json.dump(info, file, indent=2, ensure_ascii=False)
 
 
