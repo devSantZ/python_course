@@ -1,5 +1,5 @@
-# Os métodos de classe são métodos da classe e não da instância, quer dizer que eles não tem acesso aos dados da
-# instância.
+# Os métodos de classe (classmethod) são métodos da classe e não da instância, quer dizer que eles não tem acesso aos
+# dados da instância.
 class Pessoa:
     def __init__(self, nome, sobrenome):
         self.nome = nome
@@ -7,11 +7,11 @@ class Pessoa:
 
     @classmethod
     def fala_nome(self):
-        print(self.nome)
+        print(self.nome)  # --> Erro
 
 
 p1 = Pessoa('Luiz', 'Otávio')
-p1.fala_nome()  # AttributeError: type object 'Pessoa' has no attribute
+p1.fala_nome()  # AttributeError: type object 'Pessoa' has no attribute 'nome'
 
 # Um caso onde julgo útil ter um método de classe é para gerar um novo objeto da classe, por exemplo:
 
