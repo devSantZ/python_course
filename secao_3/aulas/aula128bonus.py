@@ -82,3 +82,42 @@ c2.fala_nome()  # O nome do cookie é: Sem nome
 # 1 - Se precisar usar a palavra self dentro do método: tem de ser método de instância
 # 2 - Se precisar usar a classe em si dentro do método (cls) tem de ser método de classe
 # 3 - Se não precisar nem de self e nem de cls dentro do método, pode ser um método estático.
+
+
+# Diferença entre @classmathod e @staticmethod
+#Em Python, tanto classmethod quanto staticmethod são decoradores utilizados para definir métodos que pertencem à 
+# classe em vez de instâncias individuais. No entanto, eles têm diferenças fundamentais em relação ao seu 
+# comportamento e uso.
+
+#classmethod:
+
+#    O método decorado com @classmethod recebe como primeiro parâmetro uma referência à própria classe (por convenção,
+#    chamada de cls). Isso permite que o método acesse e interaja com atributos e métodos da classe diretamente.
+#    classmethod é útil quando você precisa executar uma operação que envolve a classe em si, por exemplo, criar uma
+#    instância especializada da classe ou calcular algum valor relacionado à classe.
+#    A convenção para criar um método de classe é a seguinte:
+
+
+class MyClass:
+    @classmethod
+    def class_method(cls, other_parameters):
+        # ... código do método ...
+        pass
+
+
+# staticmethod:
+
+#    O método decorado com @staticmethod não recebe uma referência explícita à classe ou instância como o primeiro 
+#    parâmetro. Ele se comporta como uma função regular, exceto que é definido dentro da classe.
+#    staticmethod é usado quando você precisa encapsular uma função dentro da classe por razões de organização ou 
+#    design, mas essa função não precisa de acesso à classe ou a instâncias dela.
+#    A convenção para criar um método estático é a seguinte:
+
+class MyClass:
+    @staticmethod
+    def static_method(other_parameters):
+        # ... código do método ...
+        pass
+    
+# Em resumo, use classmethod quando precisa acessar ou modificar informações da classe e use staticmethod quando 
+# deseja organizar métodos dentro da classe, mas eles não precisam de referências explícitas à classe ou instância.
