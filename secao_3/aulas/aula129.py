@@ -59,3 +59,31 @@ print(objeto1.metodo_estatico())  # Saída: Método estático sendo chamado
 # Uma característica importante do @staticmethod é que ele não pode acessar ou modificar os atributos de instância ou de
 # classe diretamente. Caso você precise acessar atributos de classe, considere usar o @classmethod, que permite acesso
 # aos atributos de classe através do primeiro argumento cls.
+
+
+# testes
+
+
+class Testes:
+    def __init__(self, nome, idade, numero):
+        self.nome = nome
+        self.idade = idade
+        self.numero = numero
+
+    def adiciona_sobrenome(self, sobrenome):
+        return self.nome + ' ' + sobrenome
+
+    @classmethod
+    def criar_pedro_padrao(cls, idade, nome='Pedro'):
+        return cls(nome, idade, numero=None)
+
+    @staticmethod
+    def soma(x, y):
+        return x+y
+
+
+v1 = Testes('Paulo', 21, 10)
+Testes.adiciona_sobrenome(v1, 'Montano')
+print(v1.adiciona_sobrenome('Montano'))
+
+print(v1.soma(v1.numero, 12))
