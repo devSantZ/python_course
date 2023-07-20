@@ -85,11 +85,11 @@ c2.fala_nome()  # O nome do cookie é: Sem nome
 
 
 # Diferença entre @classmathod e @staticmethod
-#Em Python, tanto classmethod quanto staticmethod são decoradores utilizados para definir métodos que pertencem à 
+# Em Python, tanto classmethod quanto staticmethod são decoradores utilizados para definir métodos que pertencem à
 # classe em vez de instâncias individuais. No entanto, eles têm diferenças fundamentais em relação ao seu 
 # comportamento e uso.
 
-#classmethod:
+# classmethod:
 
 #    O método decorado com @classmethod recebe como primeiro parâmetro uma referência à própria classe (por convenção,
 #    chamada de cls). Isso permite que o método acesse e interaja com atributos e métodos da classe diretamente.
@@ -98,7 +98,7 @@ c2.fala_nome()  # O nome do cookie é: Sem nome
 #    A convenção para criar um método de classe é a seguinte:
 
 
-class MyClass:
+class MyClassMethod:
     @classmethod
     def class_method(cls, other_parameters):
         # ... código do método ...
@@ -113,7 +113,7 @@ class MyClass:
 #    design, mas essa função não precisa de acesso à classe ou a instâncias dela.
 #    A convenção para criar um método estático é a seguinte:
 
-class MyClass:
+class MyStaticMethod:
     @staticmethod
     def static_method(other_parameters):
         # ... código do método ...
