@@ -15,25 +15,25 @@ class Connection:
     # setters
     def set_user(self, user):
         self.user = user    
-    
+
     # setters
     def set_password(self, password):
         self.password = password
-        
+
     @classmethod
     def create_auth_user(cls, user, password):
         connection = cls()
         connection.user = user
-        connection.password = password
+        connection.password = password 
         return connection
-    
+
     @staticmethod
     def load_connection(user, password):        
         try:
             if user and password:
                 return f'login success'
             return f'login failure'
-        except:
+        except ValueError:
             print('Error')
             
             
