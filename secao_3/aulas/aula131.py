@@ -90,37 +90,67 @@ print(my_circle.circumference)  # Saída: 31.4
 # sejam métodos, podemos acessá-las diretamente como propriedades, o que torna o código mais legível.
 
 """
-@<nome_do_atributo>.getter:
-O decorador @<nome_do_atributo>.getter é usado para criar um método que será usado como o getter (obtenção) para um 
-atributo específico. Isso permite adicionar lógica personalizada ao obter o valor do atributo.
+Vamos explicar em mais detalhes o uso do @property para criar getters personalizados:
+
+Em Python, o @property é um decorador que permite transformar um método em uma propriedade, permitindo que você acesse o
+ método como se fosse um atributo de instância, em vez de precisar chamá-lo explicitamente como um método.
+
+O benefício do @property é que ele permite adicionar lógica personalizada durante o acesso ao atributo, sem que o 
+usuário do objeto precise saber que por trás há um método executando.
 """
 
 
-class Temperature:
-    def __init__(self, celsius):
-        self._celsius = celsius
+class Rectangle:
+    def __init__(self, width, height):
+        self._width = width
+        self._height = height
 
     @property
-    def celsius(self):
-        return self._celsius
-
-    @celsius.getter
-    def celsius(self):
-        return self._celsius
+    def width(self):
+        return self._width
 
     @property
-    def fahrenheit(self):
-        return (self._celsius * 9/5) + 32
+    def height(self):
+        return self._height
+
+    @property
+    def area(self):
+        return self._width * self._height
+
+    @width.setter
+    def width(self, value):
+        if value < 0:
+            raise ValueError("Width cannot be negative.")
+        self._width = value
+
+    @height.setter
+    def height(self, value):
+        if value < 0:
+            raise ValueError("Height cannot be negative.")
+        self._height = value
 
 
-# Criando uma temperatura com 25 graus Celsius
-temp = Temperature(25)
+# Criando um retângulo
+rectangle = Rectangle(5, 3)
 
-# Acessando a temperatura em Celsius usando o getter personalizado
-print(temp.celsius)  # Saída: 25
+# Acessando os atributos como propriedades
+print(rectangle.width)  # Saída: 5
+print(rectangle.height)  # Saída: 3
 
-# Acessando a temperatura em Fahrenheit diretamente como uma propriedade
-print(temp.fahrenheit)  # Saída: 77.0
+# Acessando a área como uma propriedade (não precisa chamar como método)
+print(rectangle.area)  # Saída: 15
 
-# Neste exemplo, usamos o @celsius.getter para definir um getter personalizado para a propriedade celsius. Isso nos
-# permite adicionar lógica de conversão quando o valor em Celsius é obtido.
+# Alterando o valor da largura através do setter
+rectangle.width = 10
+print(rectangle.width)  # Saída: 10
+
+# Tentando atribuir um valor negativo (o setter lançará um ValueError)
+rectangle.height = -2  # Isso lançará um ValueError
+
+# Neste exemplo, criamos a classe Rectangle com os atributos _width e _height, e definimos os getters usando o decorador
+# @property. Isso permite que width e height sejam acessados como propriedades diretamente. Também implementamos os
+# setters personalizados usando o decorador @<nome_do_atributo>.setter para adicionar validações de valores negativos.
+
+# Usar o @property para criar getters personalizados é uma prática comum em Python quando queremos adicionar lógica de
+# validação, cálculos ou manipulação de dados em atributos de classe. Isso torna o código mais legível, encapsulado e
+# menos suscetível a erros de uso.
