@@ -13,8 +13,8 @@ SAVE_TO = os.path.join(BASE_DIR, 'ex24.json')
 
 
 class Estadio:
-    def __init__(self, nome, capacidade, gramado, estrutura,
-                 localizacao, arquitetura):
+    def __init__(self, nome, capacidade, gramado, 
+                 estrutura, localizacao, arquitetura):
         self.nome = nome
         self.capacidade = capacidade
         self.gramado = gramado
