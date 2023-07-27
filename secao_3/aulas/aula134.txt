@@ -1,0 +1,21 @@
+As relações entre classes em programação orientada a objetos (POO) são fundamentais para modelar a estrutura e o comportamento de um sistema. Três tipos comuns de relacionamentos entre classes são associação, agregação e composição. Vamos explicar cada um deles:
+
+1. Associação:
+A associação é o tipo mais simples de relacionamento entre classes e representa uma conexão entre objetos de classes diferentes. Nessa relação, uma classe "usa" ou "tem" outra classe para realizar uma determinada funcionalidade. A associação é geralmente representada por linhas sólidas que conectam as classes, podendo ser unidirecional ou bidirecional.
+
+Exemplo: Uma classe "Carro" pode ter uma associação com uma classe "Motor" para representar que um carro usa um motor.
+
+2. Agregação:
+A agregação é um tipo de associação especial em que uma classe é composta por outras classes, mas essas classes podem existir independentemente da classe que as contém. É uma relação de "todo-parte", em que a parte pode pertencer a mais de um todo. A agregação é representada por um losango o diamante oco na extremidade da classe que contém as outras classes.
+
+Exemplo: Uma classe "Time de Futebol" pode ter uma agregação com a classe "Jogador" para representar que um time é composto por diversos jogadores, e esses jogadores podem pertencer a diferentes times.
+
+3. Composição:
+A composição é uma relação de agregação mais forte, em que as partes são criadas ou destruídas junto com o todo. As partes são exclusivas do todo e não podem existir independentemente dele. A composição é representada por um losango ou diamante sólido na extremidade da classe que contém as outras classes.
+
+Exemplo: Uma classe "Casa" pode ter uma composição com a classe "Quarto", o que significa que os quartos são parte integrante da casa e não podem existir fora dela.
+
+Comparação entre Agregação e Composição:
+A principal diferença entre agregação e composição é a relação de propriedade e ciclo de vida das partes em relação ao todo. Na agregação, as partes podem existir independentemente do todo e não há dependência rígida entre eles. Já na composição, as partes são exclusivas do todo e são criadas e destruídas junto com ele.
+
+Em resumo, as relações entre classes (associação, agregação e composição) ajudam a modelar as interações e a estrutura dos objetos em um sistema orientado a objetos, fornecendo uma visão clara das dependências entre as classes e como elas trabalham juntas para cumprir os requisitos do sistema.
