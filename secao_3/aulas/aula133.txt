@@ -1,0 +1,60 @@
+Em Python, encapsulamento refere-se à prática de ocultar os detalhes internos de uma classe de modo que os atributos e
+métodos privados não possam ser acessados diretamente fora da classe. O encapsulamento é uma das principais
+características da programação orientada a objetos e ajuda a promover a modularidade e a segurança do código.
+
+Existem três níveis de encapsulamento em Python:
+
+1. Público: Atributos e métodos públicos são acessíveis em qualquer lugar fora da classe. Eles podem ser acessados
+diretamente e geralmente são usados para interagir com o objeto.
+
+2. Protegido: Atributos e métodos protegidos são acessíveis somente dentro da classe e suas subclasses. Para indicar que
+ um atributo ou método é protegido, coloca-se um único sublinhado (_) antes do nome do atributo ou método.
+
+3. Privado: Atributos e métodos privados são acessíveis somente dentro da classe em que foram definidos. Para indicar
+que um atributo ou método é privado, coloca-se dois sublinhados duplos (__). No entanto, o Python realiza uma
+transformação de nome chamada "name mangling" (alteração de nome), em que o nome do atributo é modificado para evitar
+conflitos de nomes em subclasses. O nome real do atributo privado será prefixado com o nome da classe, dificultando o
+acesso externo direto.
+
+Aqui está um exemplo que demonstra os três níveis de encapsulamento em Python:
+
+class Exemplo:
+    def __init__(self):
+        self.publico = "Atributo público"
+        self._protegido = "Atributo protegido"
+        self.__privado = "Atributo privado"
+
+    def metodo_publico(self):
+        print("Método público")
+
+    def _metodo_protegido(self):
+        print("Método protegido")
+
+    def __metodo_privado(self):
+        print("Método privado")
+
+# Criando uma instância da classe
+objeto = Exemplo()
+
+# Acesso a atributos e métodos públicos
+print(objeto.publico)
+objeto.metodo_publico()
+
+# Tentativa de acesso a atributos e métodos protegidos e privados
+print(objeto._protegido)  # Embora possível, não é recomendado acessar atributos/métodos protegidos diretamente.
+objeto._metodo_protegido()  # Embora possível, não é recomendado chamar métodos protegidos diretamente.
+
+# Tentativa de acesso a atributos e métodos privados usando "name mangling"
+# O nome real do atributo/método privado será "_Exemplo__privado".
+# Acesso direto resultará em um AttributeError.
+# print(objeto.__privado)
+# objeto.__metodo_privado()
+
+# Acessando atributos e métodos privados usando "name mangling"
+print(objeto._Exemplo__privado)
+objeto._Exemplo__metodo_privado()
+```
+
+Lembre-se de que o encapsulamento em Python é uma convenção e não uma regra imposta rigidamente pelo interpretador. Os
+programadores podem acessar atributos e métodos protegidos e privados se assim desejarem, mas é uma prática recomendada
+respeitar a encapsulação para evitar problemas e facilitar a manutenção do código.
