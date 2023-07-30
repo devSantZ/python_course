@@ -17,21 +17,21 @@ class Carrinho:
         self._produtos = []
         
     def total(self):
-        return sum([p.valor for p in self._produtos])
+        return sum([p.preco for p in self._produtos])
     
     def inserir_produto(self, *produtos):
         self._produtos.extend(produtos)
     
     def listar_produtos(self):
         for produto in self._produtos:
-            print(produto.nome, produto.valor)
+            print(produto.nome, produto.preco)
     
     
 
 class Produto:
-    def __init__(self, nome, valor):
+    def __init__(self, nome, preco):
         self.nome = nome
-        self.valor = valor
+        self.preco = preco
         
         
 carrinho = Carrinho()
