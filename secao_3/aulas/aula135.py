@@ -12,6 +12,7 @@ outro para fazer determinada tarefa.
 """
 
 
+# Agregação
 class Carrinho:
     def __init__(self):
         self._produtos = []
