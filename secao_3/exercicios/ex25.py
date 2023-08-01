@@ -16,7 +16,6 @@ class Carro:
         self._direcao = None
         self.motor = []
 
-
     def exibir_caracteristicas(self, motor):
         print(f'nome: {self.nome}\n'
               f'marca: {self.marca}\n'
@@ -24,10 +23,8 @@ class Carro:
               f'direção: {self.direcao}\n'
               f'motor: {Motor.caracter_motor(motor)}')
 
-
     def insert_motor(self, potencia, cilindros):
         self.motor.append(Motor(potencia, cilindros))
-
 
     @property
     def marca(self):
@@ -77,7 +74,6 @@ carro1.marca = fabricante1.fabricante
 carro1.transmissao = 'Automático de 9 marchas'
 carro1.direcao = 'Elétrica'
 carro1.exibir_caracteristicas(motor1)
-
 print()
 fabricante2 = Fabrincante('BMW')
 motor2 = Motor('600 cv', '4')
