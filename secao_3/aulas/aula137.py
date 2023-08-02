@@ -20,6 +20,7 @@ Classes filhas (Cliente)
 
 class Pessoa:
     cpf = '312.591.944-21'
+
     def __init__(self, nome, sobrenome):
         self.nome = nome
         self.sobrenome = sobrenome
@@ -35,6 +36,7 @@ class Cliente(Pessoa):
 
 class Aluno(Pessoa):
     pass
+
 
 c1 = Cliente('Carlos', 'Costa')
 c1.falar_nome_da_classe()
