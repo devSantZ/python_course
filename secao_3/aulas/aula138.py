@@ -8,10 +8,12 @@ class MinhaString(str):
     def upper(self):
         print('CHAMOU UPPER!')
         return super().upper()
-      # return super(MinhaString, self).upper()
-    
+        # return super(MinhaString, self).upper()
+
+
 string = MinhaString('diego')
 print(string.upper())
+
 
 class A(object):
     atributo_a = 'valor a'
