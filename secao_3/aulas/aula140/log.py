@@ -1,8 +1,27 @@
 # Abstração
+"""
+A abstração envolve a criação de uma classe genérica, também conhecida como classe abstrata, que contém métodos     abstratos. Esses métodos são declarados na classe abstrata, mas não possuem uma implementação específica.
+
+Em seguida, você cria classes especializadas, conhecidas como subclasses, que herdam da classe abstrata. Essas subclasses são responsáveis por fornecer a implementação dos métodos abstratos de acordo com suas necessidades específicas.
+
+Na aula mencionada, a classe abstrata é a Log, enquanto as subclasses são LogPrintMixin e LogFileMixin. A classe Log define a estrutura básica e os métodos abstratos, enquanto as subclasses implementam esses métodos de acordo com suas funcionalidades específicas.
+
+Portanto, a abstração em si envolve a criação dessa hierarquia de classes, onde uma classe abstrata fornece a base genérica e as subclasses especializadas aprimoram e implementam os detalhes específicos. Isso permite uma estrutura flexível e modular, onde comportamentos e funcionalidades podem ser compartilhados e adaptados de forma consistente.
+"""
+from pathlib import Path
+import datetime
 
 
-class Log: # Template method
-    def _log(self, msg): # Assinatura do método
+#          caminho do módulo
+#                  ^    
+LOG_FILE = Path(__file__).parent / 'log.txt'
+data_hour = datetime.datetime.now()
+dt, hr = (data_hour.strftime("%Y-%m-%d"), data_hour.strftime("%H:%M:%S"))
+
+
+
+class Log:  # Template method
+    def _log(self, msg):  # Assinatura do método
         raise NotImplementedError('Implemente o método log')
     
     def log_error(self, msg):
@@ -14,7 +33,18 @@ class Log: # Template method
 
 class LogFileMixin(Log):
     def _log(self, msg):
-        print(msg)
+        msg_formatada = f'{msg}'  # {self.__class__.__name__}'
+        with open(LOG_FILE, 'a') as file:
+            file.write(f'{dt}, {hr}\n{msg_formatada}\n')
+            file.write('\n')
+            
+    # @property
+    # def log(self):
+    #     return self._log
+    
+    # @log.setter
+    # def log(self, log):
+    #     self.log = log
 
 
 class LogPrintMixin(Log):
@@ -22,7 +52,14 @@ class LogPrintMixin(Log):
         print(f'{msg} | {self.__class__.__name__}')
         
         
+        
 if __name__ == '__main__':
-    l = LogPrintMixin()
-    l.log_error('logando')
-    l.log_success('logando')
+    
+    # lp = LogPrintMixin()
+    # lp.log_error('Não foi possivel logar (lp)')
+    # lp.log_success('Sucesso ao logar (lp)')
+    
+    # lf = LogFileMixin()
+    # lf.log_error('Não foi possivel acessar (lf)')
+    # lf.log_success('Sucesso ao logar (lf)')
+    ...

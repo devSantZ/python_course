@@ -39,24 +39,35 @@ Esses são apenas alguns conceitos básicos da programação orientada a objetos
 para organizar e estruturar o código, promovendo a reutilização, modularidade e legibilidade do mesmo.
 
 
-A linguagem Python é considerada uma linguagem multiparadigma, ou seja, possibilita que o desenvolvedor programe utilizando diferentes tipos de programação como procedural, funcional, imperativa e orientação a objetos.
+A linguagem Python é considerada uma linguagem multiparadigma, ou seja, possibilita que o desenvolvedor programe
+utilizando diferentes tipos de programação como procedural, funcional, imperativa e orientação a objetos.
 
-A programação orientada a objetos é um dos paradigmas mais utilizados atualmente, porque através dela é possível organizar a arquitetura do programa trazendo uma perspectiva mais perto do mundo real, considerando as coisas (abstratas ou concretas) do mundo real como objetos no sistema, que interagem entre si e dão vida ao fluxo do programa.
+A programação orientada a objetos é um dos paradigmas mais utilizados atualmente, porque através dela é possível
+organizar a arquitetura do programa trazendo uma perspectiva mais perto do mundo real, considerando as coisas (abstratas
+ou concretas) do mundo real como objetos no sistema, que interagem entre si e dão vida ao fluxo do programa.
 
-E para garantir uma programação orientada a objetos eficiente, existem alguns pilares desse paradigma que podemos utilizar em programas escritos com Python.
+E para garantir uma programação orientada a objetos eficiente, existem alguns pilares desse paradigma que podemos
+utilizar em programas escritos com Python.
 1º Pilar: Abstração
 
-Na programação orientada a objetos, a construção dos objetos é baseada em uma Classe que representa as características daquele objeto.
+Na programação orientada a objetos, a construção dos objetos é baseada em uma Classe que representa as características
+daquele objeto.
 
-Abstração é o princípio de criar uma classe que contenha atributos e métodos que são comuns a outras classes e que podem servir como base para serem herdados.
+Abstração é o princípio de criar uma classe que contenha atributos e métodos que são comuns a outras classes e que podem
+servir como base para serem herdados.
 
-Você abstrai características comuns a N classes e fornece uma classe abstrata que pode ser herdada e servir de base para as demais.
+Você abstrai características comuns a N classes e fornece uma classe abstrata que pode ser herdada e servir de base para
+ as demais.
 
-Nesse conceito, podemos mencionar também a questão de fornecer uma classe abstrata como um contrato para que quando herdada garanta que as classes filhas irão implementar os métodos necessários, dessa forma, proteger o nosso código dando a certeza da existência e implementação do método.
+Nesse conceito, podemos mencionar também a questão de fornecer uma classe abstrata como um contrato para que quando
+herdada garanta que as classes filhas irão implementar os métodos necessários, dessa forma, proteger o nosso código
+dando a certeza da existência e implementação do método.
 
-Para ilustrar a abstração, imagine um sistema bancário, onde uma Conta bancária possa ser de diversos tipos, como, Conta poupança, Conta Corrente, Conta PJ, etc.
+Para ilustrar a abstração, imagine um sistema bancário, onde uma Conta bancária possa ser de diversos tipos, como, Conta
+poupança, Conta Corrente, Conta PJ, etc.
 
-Cada tipo de conta, ainda é uma Conta, e as características comuns a todos os tipos de contas podem ser Abstraídas em  """
+Cada tipo de conta, ainda é uma Conta, e as características comuns a todos os tipos de contas podem ser Abstraídas em
+"""
 from abc import ABCMeta, abstractmethod
 
 
@@ -84,17 +95,24 @@ class Conta(metaclass=ABCMeta):
     def exibir_saldo(self):
         pass
 
-"""
-Dessa forma eu crio uma abstração do conceito de Conta e disponibilizo uma classe para ser herdada por outras classes que são do tipo Conta.
 
-Obs: Uma classe abstrata não deve ser utilizada diretamente, deve ser vista e utilizada como uma base para outras classes como ContaCorrente, ContaPoupanca, etc.
+"""
+Dessa forma eu crio uma abstração do conceito de Conta e disponibilizo uma classe para ser herdada por outras classes 
+que são do tipo Conta.
+
+Obs: Uma classe abstrata não deve ser utilizada diretamente, deve ser vista e utilizada como uma base para outras 
+classes como ContaCorrente, ContaPoupanca, etc.
 2º Pilar: Encapsulamento
 
-O princípio de encapsulamento consiste em "esconder" a parte funcional dos objetos de forma que quem estiver utilizando não tenha que conhecer mais do que o necessário para utiliza-lo.
+O princípio de encapsulamento consiste em "esconder" a parte funcional dos objetos de forma que quem estiver utilizando 
+não tenha que conhecer mais do que o necessário para utiliza-lo.
 
-Por exemplo, ao dirigir um carro, se quisermos que o carro pare de andar, não é preciso, conhecer toda a mecânica do funcionamento por dentro do veículo para que possamos frear. Basta pisar no freio, o freio é o encapsulamento do comportamento de frear de um carro.
+Por exemplo, ao dirigir um carro, se quisermos que o carro pare de andar, não é preciso, conhecer toda a mecânica do 
+funcionamento por dentro do veículo para que possamos frear. Basta pisar no freio, o freio é o encapsulamento do 
+comportamento de frear de um carro.
 
-Na orientação a objetos, estruturamos as classes de forma a encapsular toda regra de negócio e parte funcional relacionada a classe dentro de métodos e atributos, de forma que quem utilize, apenas diga oque quer fazer.
+Na orientação a objetos, estruturamos as classes de forma a encapsular toda regra de negócio e parte funcional 
+relacionada a classe dentro de métodos e atributos, de forma que quem utilize, apenas diga oque quer fazer.
 """
 
 
@@ -119,20 +137,28 @@ class Biblioteca:
         self.livros_disponiveis.append(livro)
         print(f'Obrigado pro devolver o livro: {livro}')
 
+
 """
-Na classe biblioteca, temos os métodos que fornecem as regras de negócio para que o programa que for utilizar não precise conhecer oque está acontecendo ali dentro e sim possa simplesmente dizer:
+Na classe biblioteca, temos os métodos que fornecem as regras de negócio para que o programa que for utilizar não 
+precise conhecer oque está acontecendo ali dentro e sim possa simplesmente dizer:
 
 // biblioteca me mostre os livros:
 biblioteca.exibir_livros()
 
 3º Pilar: Herança
 
-A herança consiste em determinar que uma classe existe por si mesma, porém, ela é uma outra classe em sua essência... Por exemplo, uma ContaCorrente existe mas ela é uma Conta.
+A herança consiste em determinar que uma classe existe por si mesma, porém, ela é uma outra classe em sua essência... 
+Por exemplo, uma ContaCorrente existe mas ela é uma Conta.
 
-Quando a herança é utilizada, a classe que herda, automaticamente, possui os atributos e métodos definidos na classe da qual herdou.
+Quando a herança é utilizada, a classe que herda, automaticamente, possui os atributos e métodos definidos na classe da 
+qual herdou.
 
-Por exemplo, imagine que o sistema bancário tenha uma uma regra geral para deposito e exibição de saldo para todos os tipos de conta somente o saque muda de conta para conta. Nesse caso, podemos criar uma classe Conta com as características comuns das outras Contas, e as outras contas, irão herdar essas características:
+Por exemplo, imagine que o sistema bancário tenha uma uma regra geral para deposito e exibição de saldo para todos os 
+tipos de conta somente o saque muda de conta para conta. Nesse caso, podemos criar uma classe Conta com as 
+características comuns das outras Contas, e as outras contas, irão herdar essas características:
 """
+
+
 class Conta(metaclass=ABCMeta):
     _numero = "00000"
     _titular = "root"
@@ -216,7 +242,7 @@ class BankingSystem:
 
     def acessar_conta(self, nome_titular: str, conta_numero: str):
         contas = [acc for acc in self.__contas 
-                    if acc.titular() == nome_titular and acc.numero() == conta_numero]
+            if acc.titular() == nome_titular and acc.numero() == conta_numero]
         if len(contas) == 0:
             print("Conta não existe!")
             return
@@ -246,6 +272,7 @@ class BankingSystem:
             print(conta.exibir_saldo())
         else:
             print("Escolha inválida!")
+
 
 banking_system = BankingSystem()
 while True:

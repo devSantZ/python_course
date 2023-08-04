@@ -1,0 +1,18 @@
+2023-08-04, 12:15:07
+success: Xiaomi mi 10, status: self._ligado = True
+
+2023-08-04, 12:15:07
+success: Iphone 14, status: self._ligado = True
+
+2023-08-04, 12:15:07
+success: Xiaomi mi 10, status: self._ligado = False
+
+2023-08-04, 12:15:30
+success: Xiaomi mi 10, status: self._ligado = True
+
+2023-08-04, 12:15:30
+success: Iphone 14, status: self._ligado = True
+
+2023-08-04, 12:15:30
+error: Xiaomi mi 10, status: self._ligado = False
+
