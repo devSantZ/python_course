@@ -133,26 +133,6 @@ Quando a herança é utilizada, a classe que herda, automaticamente, possui os a
 
 Por exemplo, imagine que o sistema bancário tenha uma uma regra geral para deposito e exibição de saldo para todos os tipos de conta somente o saque muda de conta para conta. Nesse caso, podemos criar uma classe Conta com as características comuns das outras Contas, e as outras contas, irão herdar essas características:
 """
-class Conta():
-    _numero = "00000"
-    _titular = "root"
-    saldo = 0
-
-    def __init__(self, numero: str, titular: str, saldo: float):
-        self._numero = numero
-        self._titular = titular
-        self.saldo = saldo
-
-    def depositar(self, value: float):
-        ...
-        # Regra para fazer o depósito...
-
-    def exibir_saldo(self):
-        ...
-        # Exiba o saldo...
-
-
-# Para aplicar a herança em Python, basta referênciar a classe que se quer herdar entre parenteses:
 class Conta(metaclass=ABCMeta):
     _numero = "00000"
     _titular = "root"
@@ -224,7 +204,7 @@ class BankingSystem:
             print("Deposito Inicial deve ser maior que Zero!")
             return
 
-        conta = Savingsconta(self.__gerar_numero_conta(), nome_titular, deposito_inicial)
+        conta = ContaPoupanca(self.__gerar_numero_conta(), nome_titular, deposito_inicial)
         self.__contas.append(conta)
         print("Conta criada com sucesso!")
         print("Titular: ", conta.titular())
@@ -283,15 +263,14 @@ while True:
         banking_system.criar_conta_poupanca(initial_deposit, nome_titular)
     elif escolha_usuario == 2:
         print("ACCESS")
-        print("Digite o name do titular da conta")
+        print("Digite o nome do titular da conta")
         nome_titular = input()
-        print("Digite o conta numero")
+        print("Digite o número da conta")
         conta_numero = input()
-        banking_system.access_conta(nome_titular, conta_numero)
+        banking_system.acessar_conta(nome_titular, conta_numero)
     elif escolha_usuario == 3:
         banking_system.total_of_contas()
     elif escolha_usuario == 0:
         quit()
     else:
         print("Escolha inválida!")
-
