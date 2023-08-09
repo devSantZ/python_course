@@ -8,6 +8,7 @@ Na aula mencionada, a classe abstrata é a Log, enquanto as subclasses são LogP
 
 Portanto, a abstração em si envolve a criação dessa hierarquia de classes, onde uma classe abstrata fornece a base genérica e as subclasses especializadas aprimoram e implementam os detalhes específicos. Isso permite uma estrutura flexível e modular, onde comportamentos e funcionalidades podem ser compartilhados e adaptados de forma consistente.
 """
+from abc import ABC, abstractmethod
 from pathlib import Path
 import datetime
 
@@ -20,9 +21,9 @@ dt, hr = (data_hour.strftime("%Y-%m-%d"), data_hour.strftime("%H:%M:%S"))
 
 
 
-class Log:  # Template method
-    def _log(self, msg):  # Assinatura do método
-        raise NotImplementedError('Implemente o método log')
+class Log(ABC):
+    @abstractmethod
+    def _log(self, msg): ...
     
     def log_error(self, msg):
         return self._log(f'error: {msg}')
