@@ -19,25 +19,25 @@ use @abstractmethod como decorator mais interno.
 from abc import ABC, abstractmethod
 
 
-# class Log(metaclass=ABCMeta)
-# class Log(ABC):
+class Log(metaclass=ABCMeta)
+class Log(ABC):
     
-#     @abstractmethod
-#     def _log(self, msg): ...
+    @abstractmethod
+    def _log(self, msg): ...
     
-#     def log_error(self, msg):
-#         return self._log(f'error: {msg}')
+    def log_error(self, msg):
+        return self._log(f'error: {msg}')
 
-#     def log_success(self, msg):
-#         return self._log(f'success: {msg}')
+    def log_success(self, msg):
+        return self._log(f'success: {msg}')
     
-# class LogPrintMixin(Log):
-#     def _log(self, msg):
-#         print(f'{msg} | {self.__class__.__name__}')
+class LogPrintMixin(Log):
+    def _log(self, msg):
+        print(f'{msg} | {self.__class__.__name__}')
         
         
-# l = LogPrintMixin()
-# l.log_success('hello')
+l = LogPrintMixin()
+l.log_success('hello')
 
 """
 1. Classe Abstrata e Métodos Abstratos:
