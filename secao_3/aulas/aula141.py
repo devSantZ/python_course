@@ -19,7 +19,7 @@ use @abstractmethod como decorator mais interno.
 from abc import ABC, abstractmethod
 
 
-class Log(metaclass=ABCMeta)
+# class Log(metaclass=ABCMeta)
 class Log(ABC):
     
     @abstractmethod
