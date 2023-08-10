@@ -71,3 +71,51 @@ print(circulo.area())
 
 quadrado = Square(14)
 print(quadrado.area())
+
+
+class Calc(ABC):
+    @abstractmethod
+    def operation(self):
+        pass
+    
+
+class Division(Calc):
+    def __init__(self, n1, n2):
+        self.n1 = n1
+        self.n2 = n2   
+              
+    def operation(self):
+        return round(self.n1 / self.n2, 2)
+    
+
+class Multiplication(Calc):
+    def __init__(self, n1, n2):
+        self.n1 = n1
+        self.n2 = n2   
+              
+    def operation(self):
+        return round(self.n1 * self.n2, 2)
+    
+    
+class Subtraction(Calc):
+    def __init__(self, n1, n2):
+        self.n1 = n1
+        self.n2 = n2   
+              
+    def operation(self):
+        return round(self.n1 - self.n2, 2)
+    
+    
+class Addition(Calc):
+    def __init__(self, n1, n2):
+        self.n1 = n1
+        self.n2 = n2   
+              
+    def operation(self):
+        return round(self.n1 + self.n2, 2)
+    
+div = Division(10, 2)
+mul = Multiplication(4, 5)
+sub = Subtraction(15, 5)
+add = Addition(8, 2)
+print(f'{div.operation()}\n{mul.operation()}\n{sub.operation()}\n{add.operation()}\n')
