@@ -28,5 +28,5 @@ if __name__ == '__main__':
     p3 = p1 + p2
     print(p3)
     
-    print('p1 é maior que p2?', p1>p2)
-    print('p1 é maior que p2?', p1<p2)
+    print('p1 é maior que p2?', p1 > p2)
+    print('p1 é maior que p2?', p1 < p2)
