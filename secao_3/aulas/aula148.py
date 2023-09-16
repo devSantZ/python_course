@@ -30,3 +30,4 @@ if __name__ == '__main__':
     
     print('p1 é maior que p2?', p1 > p2)
     print('p1 é maior que p2?', p1 < p2)
+
