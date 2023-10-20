@@ -256,7 +256,7 @@ class BankingSystem:
             print("sacar")
             print("Digite o valor a sacar")
             value = float(input())
-            if conta.sacar(value):
+            if conta.sacar( ):
                 print("Saque realizado com sucesso!")
             else:
                 print("Problema ao sacar, verifique o saldo!")
