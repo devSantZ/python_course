@@ -46,3 +46,4 @@ estadios = [vars(maracana), vars(pacaiambu)]
 
 if __name__ == '__main__':
     salvar_classe(estadios)
+    
