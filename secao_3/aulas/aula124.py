@@ -10,53 +10,51 @@ class Estado:
     def __init__(self, total=1):
         self.total = total
 
-    def incremantar(self, incremento):
+    def incrementar(self, incremento):
         self.total += incremento
 
 v1 = Estado()
 v2 = Estado()
 
-v1.incremantar(5)
-v1.incremantar(10)
-v1.incremantar(100)
+v1.incrementar(5)
+v1.incrementar(10)
+v1.incrementar(100)
 print(v1.total)
 print(v2.total)
 
 
 class Camera:
-    def __init__(self, nome, filmando=False):
+    def __init__(self, nome, estado=False):
         self.nome = nome
-        self.filmando = filmando
-
-
+        self.estado = estado
+        
+        
     def filmar(self):
-        if self.filmando:
+        if self.estado:
             print(f'{self.nome} já está filmando')
             return
-        self.filmando = True
-        print(f'{self.nome} está filmando...')
-
-
-    def fotografar(self):
-        if self.filmando:
-            print(f'{self.nome} está não pode fotografar enquanto filma...')
-            return
-        print(f'{self.nome} está fotografando...')
-
-
+        self.estado = True
+        print(f'{self.nome} está filmando')
+    
+    
     def parar_de_filmar(self):
-        if self.filmando:
-            print(f'{self.nome} parou de filmar')
-            self.filmando = False
+        if self.estado:
+            print(f'{self.nome} está parando de filmar')
+            self.estado = False
             return
         print(f'{self.nome} não está filmando')
+        
+        
+    def fotografar(self):
+        if not self.estado:
+            print(f'{self.nome} está fotografando')
+            return
+        print(f'{self.nome} nao pode fotografar enquanto filma')
+        
 
-
-
-c1 = Camera('Canon')
-c2 = Camera('Sony')
-
-c1.filmar()
-c1.fotografar()
-c1.parar_de_filmar()
-c1.fotografar()
+cam1 = Camera('Nokia')
+cam1.filmar()
+cam1.filmar()
+cam1.fotografar()
+cam1.parar_de_filmar()
+cam1.fotografar()
