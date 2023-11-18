@@ -36,21 +36,21 @@ print(Exemplo.concatenacao(var, '"com a palavra a juntar"'))  # atributo_da_clas
 print(var.concatenacao('Palavra pra juntar com o "var"'))
 
 
-# class Exemplo:
-#
-#     atributo_da_classe = 'Este atributo é da classe '
-#
-#     def __init__(self):
-#         pass
-#
-#     @staticmethod
-#     def concatenacao(palavra):
-#         return Exemplo.atributo_da_classe + palavra
-#
-#
-#
-# print(Exemplo.atributo_da_classe)
-# print(Exemplo.concatenacao('palavra aleatoria'))
+class Exemplo2:
+
+    atributo_da_classe = 'Este atributo é da classe '
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def concatenacao(palavra):
+        return Exemplo.atributo_da_classe + palavra
+
+
+
+print(Exemplo2.atributo_da_classe)
+print(Exemplo2.concatenacao('palavra aleatoria'))
 
 
 # Atributos de classe
