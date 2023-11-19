@@ -24,6 +24,10 @@ p1 = Pessoa('Carlos', 21, 'São Paulo')
 p2 = Pessoa('Marcos', 35, 'Brasilia')
 p3 = Pessoa('Junior', 2, 'Itapecuru-Mirim')
 data = [vars(p1), vars(p2), vars(p3)]
-Pessoa.salvar(data)
+
+
+if __name__ == '__main__':
+    Pessoa.salvar(data)
+
 
     
