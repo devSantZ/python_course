@@ -1,18 +1,17 @@
 [
   {
-    "nome": "Maracanã",
-    "capacidade": 78.838,
-    "gramado": "natural",
-    "estrutura": "moderno",
-    "localizacao": "Rio de Janeiro",
-    "arquitetura": "marcante"
+    "nome": "Carlos",
+    "idade": 21,
+    "cidade": "São Paulo"
   },
   {
-    "nome": "Pacaiambu",
-    "capacidade": 40.199,
-    "gramado": "conservado, natural",
-    "estrutura": "tradicional",
-    "localizacao": "São Paulo",
-    "arquitetura": "clássica"
+    "nome": "Marcos",
+    "idade": 35,
+    "cidade": "Brasilia"
+  },
+  {
+    "nome": "Junior",
+    "idade": 2,
+    "cidade": "Itapecuru-Mirim"
   }
 ]

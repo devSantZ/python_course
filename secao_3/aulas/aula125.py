@@ -53,7 +53,7 @@ print(Exemplo2.atributo_da_classe)
 print(Exemplo2.concatenacao('palavra aleatoria'))
 
 
-# Atributos de classe
+#Atributos de classe
 class Pessoa:
     ano_atual = 2022
 

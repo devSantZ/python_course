@@ -1,49 +1,29 @@
-"""
-Exercício - Salvando a classe em json
-Salve os dados da sua classe em JSON
-e depois crie novamente as instâncias
-da classe com os dados salvos
-Faça em arquivos separados.
-"""
-import json
 import os
+import json
+
 
 BASE_DIR = os.path.dirname(__file__)
 SAVE_TO = os.path.join(BASE_DIR, 'ex24.json')
 
 
-class Estadio:
-    def __init__(self, nome, capacidade, gramado, 
-                 estrutura, localizacao, arquitetura):
+
+class Pessoa:
+    def __init__(self, nome:str, idade:int, cidade:str):
         self.nome = nome
-        self.capacidade = capacidade
-        self.gramado = gramado
-        self.estrutura = estrutura
-        self.localizacao = localizacao
-        self.arquitetura = arquitetura
+        self.idade = idade
+        self.cidade = cidade
+        
+    
+    def salvar(*args):
+        with open(SAVE_TO, 'w', encoding='utf8') as file:
+           for i in args:
+               json.dump(i, file, indent=2, ensure_ascii=False)
+            
+            
+p1 = Pessoa('Carlos', 21, 'São Paulo')
+p2 = Pessoa('Marcos', 35, 'Brasilia')
+p3 = Pessoa('Junior', 2, 'Itapecuru-Mirim')
+data = [vars(p1), vars(p2), vars(p3)]
+Pessoa.salvar(data)
 
-    def converter(self):
-        return {
-            'nome': self.nome,
-            'capacidade': self.capacidade,
-            'gramado': self.gramado,
-            'estrutura': self.estrutura,
-            'localizacao': self.localizacao,
-            'arquitetura': self.arquitetura,
-        }
-
-
-def salvar_classe(info):
-    with open(SAVE_TO, 'w') as file:
-        json.dump(info, file, indent=2, ensure_ascii=False)
-
-
-maracana = Estadio('Maracanã', 78.838, 'natural', 'moderno',
-                   'Rio de Janeiro', 'marcante')
-pacaiambu = Estadio('Pacaiambu', 40.199, 'conservado, natural', 'tradicional',
-                   'São Paulo', 'clássica')
-estadios = [vars(maracana), vars(pacaiambu)]
-
-if __name__ == '__main__':
-    salvar_classe(estadios)
     
