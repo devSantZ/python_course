@@ -42,29 +42,33 @@ A MRO é calculada usando o algoritmo C3, que segue três princípios:
 
 class A:
     pass
+
     def metodo(self):
-        print('A')
+        print("A")
 
 
 class B(A):
     pass
+
     def metodo(self):
-        print('B')
+        print("B")
 
 
 class C(A):
     pass
+
     def metodo(self):
-        print('C')
+        print("C")
 
 
 class D(B, C):
     pass
+
     def metodo(self):
-        print('D')
+        print("D")
 
 
 d = D()
 d.metodo()
-        
+
 print(D.mro())

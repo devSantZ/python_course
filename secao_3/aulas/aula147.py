@@ -18,6 +18,7 @@ class Pessoa:
         class_name = type(self).__name__
         return f"{class_name}('{self.nome}', {self.idade})"
 
+
 pessoa = Pessoa("Alice", 30)
 print(repr(pessoa))  # Saída: Pessoa('Alice', 30)
 
@@ -28,37 +29,34 @@ O método __str__ é responsável por fornecer uma representação legível do o
 """
 
 
-
 class Pessoa2:
     def __init__(self, nome, idade) -> None:
         self.nome = nome
         self.idade = idade
-        
-    def __str__(self) -> str:
-        return f'{self.nome} tem {self.idade} anos'
-    
-    
-pessoa2 = Pessoa2('Carlos', 23)
-print(str(pessoa2))
 
+    def __str__(self) -> str:
+        return f"{self.nome} tem {self.idade} anos"
+
+
+pessoa2 = Pessoa2("Carlos", 23)
+print(str(pessoa2))
 
 
 # Extras
 class Ponto:
-    def __init__(self, x:int, y:int, z:str) -> None:
+    def __init__(self, x: int, y: int, z: str) -> None:
         self.x = x
         self.y = y
         self.z = z
-        
+
     def __str__(self) -> str:
-        return f'({self.x, self.y}, {self.z})'
-    
+        return f"({self.x, self.y}, {self.z})"
+
     def __repr__(self) -> str:
         class_name = type(self).__name__
         return f"{class_name}({self.x!r}, {self.y!r}, {self.z!r})"
-        
 
 
 p1 = Ponto(2, 42, 94)
-print(f'{p1!r}')
+print(f"{p1!r}")
 # print(f'{p1!s}')

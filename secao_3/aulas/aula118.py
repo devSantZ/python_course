@@ -1,5 +1,6 @@
 # classe
 
+
 class Exemplos:
     """
     Classe com exemplos de Classes, Objetos, Atributos, Métodos,

@@ -71,19 +71,19 @@ class Testes:
         self.numero = numero
 
     def adiciona_sobrenome(self, sobrenome):
-        return self.nome + ' ' + sobrenome
+        return self.nome + " " + sobrenome
 
     @classmethod
-    def criar_pedro_padrao(cls, idade, nome='Pedro'):
+    def criar_pedro_padrao(cls, idade, nome="Pedro"):
         return cls(nome, idade, numero=None)
 
     @staticmethod
     def soma(x, y):
-        return x+y
+        return x + y
 
 
-v1 = Testes('Paulo', 21, 10)
-Testes.adiciona_sobrenome(v1, 'Montano')
-print(v1.adiciona_sobrenome('Montano'))
+v1 = Testes("Paulo", 21, 10)
+Testes.adiciona_sobrenome(v1, "Montano")
+print(v1.adiciona_sobrenome("Montano"))
 
 print(v1.soma(v1.numero, 12))

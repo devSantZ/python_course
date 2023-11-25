@@ -11,16 +11,18 @@ Escopo e métodos da classe
 # animal1 = Animal('Cachorro')
 # print(animal1.nome)
 
+
 class Animal:
     def __init__(self, nome):
         self.nome = nome
 
     def comer(self, comida):
-        return f'{self.nome} está comendo {comida}'
+        return f"{self.nome} está comendo {comida}"
 
     # def executar(self, *args, **kwargs):
     #     return self.comer(*args, **kwargs)
 
-animal1 = Animal('Urso')
-print(Animal.comer(animal1,'Foca'))
+
+animal1 = Animal("Urso")
+print(Animal.comer(animal1, "Foca"))
 # print(Animal.executar(animal1,'Foca'))

@@ -28,10 +28,9 @@ nomenclatura.
 
 class Foo:
     def __init__(self):
-        self.public = 'public'
-        self.protected = 'protected'
-        self.private = 'private'
-
+        self.public = "public"
+        self.protected = "protected"
+        self.private = "private"
 
     def public_method(self):
         """
@@ -40,7 +39,7 @@ class Foo:
         Em Python, os métodos são públicos por padrão, o que significa que todos os métodos definidos em uma classe são
         públicos, a menos que seu nome comece com um único sublinhado (_) ou dois sublinhados (__).
         """
-        return f'Este é um método publico'
+        return f"Este é um método publico"
 
     def _protected_method(self):
         """
@@ -49,7 +48,7 @@ class Foo:
         verdadeira restrição de acesso em Python, essa convenção indica que o método deve ser tratado como protegido e
         não deve ser acessado fora da classe ou das subclasses.
         """
-        return f'Este é um método protegido'
+        return f"Este é um método protegido"
 
     def __private_method(self):
         """
@@ -61,7 +60,7 @@ class Foo:
         método mais difícil de ser acessado acidentalmente fora da classe. O nome do método é modificado na forma
         _NomeDaClasse__metodo_privado.
         """
-        return f'Este é um método privado'
+        return f"Este é um método privado"
 
 
 f = Foo()

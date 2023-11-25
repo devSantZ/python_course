@@ -10,7 +10,7 @@ class Pessoa:
         print(self.nome)  # --> Erro
 
 
-p1 = Pessoa('Luiz', 'Otávio')
+p1 = Pessoa("Luiz", "Otávio")
 p1.fala_nome()  # AttributeError: type object 'Pessoa' has no attribute 'nome'
 
 # Um caso onde julgo útil ter um método de classe é para gerar um novo objeto da classe, por exemplo:
@@ -26,8 +26,8 @@ class Pessoa:
         return cls(nome, sobrenome)
 
 
-p1 = Pessoa.cria_pessoa('Marcos', 'Otávio')
-p2 = Pessoa.cria_pessoa('Lucas', 'Ferreira')
+p1 = Pessoa.cria_pessoa("Marcos", "Otávio")
+p2 = Pessoa.cria_pessoa("Lucas", "Ferreira")
 
 print(p1.nome, p1.sobrenome)  # Marcos Otávio
 print(p2.nome, p2.sobrenome)  # Lucas Ferreira
@@ -54,16 +54,16 @@ class Cookie:
     def fala_nome(self):
         # Aqui eu vou precisar do nome da instância
         # portanto método de instância
-        print(f'O nome do cookie é: {self.nome}')
+        print(f"O nome do cookie é: {self.nome}")
 
     @classmethod
     def cria_cookie(cls):
         # Isso retorna a própria classe já criando
         # uma instância
-        return cls(nome='Sem nome')
+        return cls(nome="Sem nome")
 
 
-c1 = Cookie('Gato 1')
+c1 = Cookie("Gato 1")
 c1.fala_nome()  # O nome do cookie é: Gato 1
 
 # Se, por algum motivo, eu precisar criar um objeto
@@ -86,7 +86,7 @@ c2.fala_nome()  # O nome do cookie é: Sem nome
 
 # Diferença entre @classmathod e @staticmethod
 # Em Python, tanto classmethod quanto staticmethod são decoradores utilizados para definir métodos que pertencem à
-# classe em vez de instâncias individuais. No entanto, eles têm diferenças fundamentais em relação ao seu 
+# classe em vez de instâncias individuais. No entanto, eles têm diferenças fundamentais em relação ao seu
 # comportamento e uso.
 
 # classmethod:
@@ -107,17 +107,19 @@ class MyClassMethod:
 
 # staticmethod:
 
-#    O método decorado com @staticmethod não recebe uma referência explícita à classe ou instância como o primeiro 
+#    O método decorado com @staticmethod não recebe uma referência explícita à classe ou instância como o primeiro
 #    parâmetro. Ele se comporta como uma função regular, exceto que é definido dentro da classe.
-#    staticmethod é usado quando você precisa encapsular uma função dentro da classe por razões de organização ou 
+#    staticmethod é usado quando você precisa encapsular uma função dentro da classe por razões de organização ou
 #    design, mas essa função não precisa de acesso à classe ou a instâncias dela.
 #    A convenção para criar um método estático é a seguinte:
+
 
 class MyStaticMethod:
     @staticmethod
     def static_method(other_parameters):
         # ... código do método ...
         pass
-    
-# Em resumo, use classmethod quando precisa acessar ou modificar informações da classe e use staticmethod quando 
+
+
+# Em resumo, use classmethod quando precisa acessar ou modificar informações da classe e use staticmethod quando
 # deseja organizar métodos dentro da classe, mas eles não precisam de referências explícitas à classe ou instância.

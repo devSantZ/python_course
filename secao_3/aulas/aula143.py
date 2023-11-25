@@ -21,31 +21,31 @@ class Animal(ABC):
     @abstractmethod
     def falar(self):
         pass
-    
+
 
 class Cachorro(Animal):
     def __init__(self, nome):
         self.nome = nome
-        
+
     def falar(self):
-        return f'woolf'
-    
+        return f"woolf"
+
 
 class Gato(Animal):
     def __init__(self, nome):
         self.nome = nome
-        
+
     def falar(self):
-        return f'Miau'
+        return f"Miau"
 
 
 def fazer_animal_falar(animal):
-    print(f'o {animal.nome} faz {animal.falar()}')
+    print(f"o {animal.nome} faz {animal.falar()}")
 
 
-cachorro = Cachorro('cachorro')
-gato = Gato('gato')
-    
+cachorro = Cachorro("cachorro")
+gato = Gato("gato")
+
 fazer_animal_falar(cachorro)
 fazer_animal_falar(gato)
 
@@ -85,7 +85,7 @@ Isso torna o código flexível e reutilizável, permitindo que você adicione ma
 Em resumo, seu código é um exemplo válido de polimorfismo, mostrando como as subclasses podem ser tratadas de maneira uniforme como objetos da classe base ou de uma interface comum.
 """
 
-print(20*'*')
+print(20 * "*")
 
 """
 2. Assinatura de Métodos:
@@ -97,26 +97,26 @@ A assinatura de um método refere-se à combinação de seu nome e parâmetros. 
 class Calculadora:
     def somar(self, x, y):
         return x + y
-    
+
     def multiplicar(self, x, y):
         return x * y
-    
+
     def dividir(self, x, y):
         return x / y
-    
-    
+
+
 calculadora = Calculadora()
 res_soma = calculadora.somar(3, 10)
 res_mult = calculadora.multiplicar(4, 2)
 res_div = calculadora.dividir(15, 3)
-print(f'{res_soma}\n{res_mult}\n{res_div}')
+print(f"{res_soma}\n{res_mult}\n{res_div}")
 
 
 """
 Nesse exemplo, a assinatura dos métodos somar, multiplicar e dividir inclui os parâmetros que eles aceitam. O Python verifica a assinatura do método chamado para decidir qual implementação usar.
 """
 
-print(20*'*')
+print(20 * "*")
 
 """
 3. Princípio da Substituição de Liskov:
@@ -128,30 +128,28 @@ O Princípio da Substituição de Liskov (Liskov Substitution Principle, LSP) é
 class Forma:
     def calcular_area(self):
         pass
-    
+
 
 class Retangulo(Forma):
     def __init__(self, largura, altura):
         self.altura = altura
         self.largura = largura
-        
-        
+
     def calcular_area(self):
         return self.altura * self.largura
-    
-    
+
+
 class Quadrado(Forma):
     def __init__(self, lado):
         self.lado = lado
-        
-    
+
     def calcular_area(self):
         return self.lado * self.lado
-    
-    
+
+
 def imprimir_area(res):
-    print(f'{res.calcular_area()}')
-    
+    print(f"{res.calcular_area()}")
+
 
 retangulo = Retangulo(3, 8)
 quadrado = Quadrado(5)
@@ -161,43 +159,43 @@ imprimir_area(quadrado)
 """
 Neste exemplo, a classe Quadrado herda da classe base Forma, assim como a classe Retangulo. As duas subclasses implementam o método calcular_area. A função imprimir_area recebe um objeto Forma (pode ser um Retangulo ou um Quadrado) e chama o método calcular_area para imprimir a área. Isso demonstra o LSP, pois as subclasses podem ser substituídas pela classe base sem causar problemas no comportamento esperado.
 """
+
+
 class DataBase(ABC):
     @abstractmethod
     def conect_data_base(self):
         pass
-    
+
     @abstractmethod
     def exec_query(self, query):
         pass
-    
+
 
 class MySqlBase(DataBase):
     def conect_data_base(self):
-        print('conectando ao banco Mysql')
-    
+        print("conectando ao banco Mysql")
+
     def exec_query(self, query):
-        print(f'Executando: {query}')
+        print(f"Executando: {query}")
 
 
 class SqLiteBase(DataBase):
     def conect_data_base(self):
-        print('conectando ao banco SqLite')
-        
-    
+        print("conectando ao banco SqLite")
+
     def exec_query(self, query):
-        print(f'Executando: {query}')
-        
+        print(f"Executando: {query}")
+
 
 def use_data_base(db):
     db.conect_data_base()
-    db.exec_query('SELECT * FROM tabela')
-    
+    db.exec_query("SELECT * FROM tabela")
+
 
 mysql = MySqlBase()
 sqlite = SqLiteBase()
 use_data_base(mysql)
 use_data_base(sqlite)
-
 
 
 # Outro exemplo
@@ -207,18 +205,18 @@ class Notification(ABC):
     @abstractmethod
     def notify(self, msg, user):
         pass
-    
-    
+
+
 class NotifyEmail(Notification):
     def notify(self, msg, user):
-        print(f'send {msg} to {user}')
-    
-    
+        print(f"send {msg} to {user}")
+
+
 class NotfySMS(Notification):
     def notify(self, msg, user):
-        print(f'send {msg} to {user}')
+        print(f"send {msg} to {user}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     notification = NotfySMS()
-    notification.notify('André', 'good luck')
+    notification.notify("André", "good luck")

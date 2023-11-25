@@ -118,7 +118,6 @@ relacionada a classe dentro de métodos e atributos, de forma que quem utilize, 
 
 # Por exemplo:
 class Biblioteca:
-
     def __init__(self, livros_disponiveis) -> None:
         self.livros_disponiveis = livros_disponiveis
 
@@ -127,15 +126,15 @@ class Biblioteca:
             print(livro)
 
     def emprestar_livro(self, livro):
-        print(f'Você escolheu o livro: {livro}')
+        print(f"Você escolheu o livro: {livro}")
         if livro in self.livros_disponiveis:
             self.livros_disponiveis.remove(livro)
         else:
-            print('Desculpe o livro não está disponível!')
+            print("Desculpe o livro não está disponível!")
 
     def devolver_livro(self, livro):
         self.livros_disponiveis.append(livro)
-        print(f'Obrigado pro devolver o livro: {livro}')
+        print(f"Obrigado pro devolver o livro: {livro}")
 
 
 """
@@ -184,7 +183,6 @@ class Conta(metaclass=ABCMeta):
 
 
 class ContaPoupanca(Conta):
-
     def __init__(self, numero: str, titular: str, saldo: float):
         super().__init__(numero, titular, saldo)
 
@@ -230,7 +228,9 @@ class BankingSystem:
             print("Deposito Inicial deve ser maior que Zero!")
             return
 
-        conta = ContaPoupanca(self.__gerar_numero_conta(), nome_titular, deposito_inicial)
+        conta = ContaPoupanca(
+            self.__gerar_numero_conta(), nome_titular, deposito_inicial
+        )
         self.__contas.append(conta)
         print("Conta criada com sucesso!")
         print("Titular: ", conta.titular())
@@ -241,8 +241,11 @@ class BankingSystem:
         print("contas: ", str(len(self.__contas)))
 
     def acessar_conta(self, nome_titular: str, conta_numero: str):
-        contas = [acc for acc in self.__contas 
-            if acc.titular() == nome_titular and acc.numero() == conta_numero]
+        contas = [
+            acc
+            for acc in self.__contas
+            if acc.titular() == nome_titular and acc.numero() == conta_numero
+        ]
         if len(contas) == 0:
             print("Conta não existe!")
             return
@@ -251,12 +254,12 @@ class BankingSystem:
         print("Digite 1 para sacar")
         print("Digite 2 para depositar")
         print("Digite 3 para exibir saldo")
-        escolha_usuario = (int(input()))
+        escolha_usuario = int(input())
         if escolha_usuario == 1:
             print("sacar")
             print("Digite o valor a sacar")
             value = float(input())
-            if conta.sacar( ):
+            if conta.sacar():
                 print("Saque realizado com sucesso!")
             else:
                 print("Problema ao sacar, verifique o saldo!")
@@ -280,7 +283,7 @@ while True:
     print("Digite 2 para acessar a conta")
     print("Digite 3 para exibir o total de contas")
     print("Digite 0 para sair")
-    escolha_usuario = (int(input()))
+    escolha_usuario = int(input())
     if escolha_usuario == 1:
         print("CREATE")
         print("Digite o nome do titular da conta")

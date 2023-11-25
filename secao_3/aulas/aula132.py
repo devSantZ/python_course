@@ -14,12 +14,12 @@ class Caneta:
 
     @property
     def cor(self):
-        print('ESTOU NO GETTER')
+        print("ESTOU NO GETTER")
         return self._cor
 
     @cor.setter
     def cor(self, valor):
-        print('ESTOU NO SETTER')
+        print("ESTOU NO SETTER")
         self._cor = valor
 
     @property
@@ -31,9 +31,9 @@ class Caneta:
         self._cor_tampa = valor
 
 
-caneta = Caneta('Azul')
-caneta.cor = 'Rosa'
-caneta.cor_tampa = 'Azul'
+caneta = Caneta("Azul")
+caneta.cor = "Rosa"
+caneta.cor_tampa = "Azul"
 print(caneta.cor)
 print(caneta.cor_tampa)
 
@@ -58,13 +58,14 @@ class Circle:
         return self._radius
 
 
-circle1 = Circle('21')
+circle1 = Circle("21")
 print(circle1.radius)
 
 
 # @<atributo>.setter (Setter)
 # O decorador @<atributo>.setter permite criar um método para atribuir um valor personalizado a um atributo. Quando você
 # faz uma atribuição ao atributo decorado com o setter, na verdade está chamando a função definida no decorador.
+
 
 class Circle1:
     def __init__(self, radius):
@@ -86,10 +87,12 @@ class Circle1:
 
 # Uso do @<atributo>.setter (Setter)
 circle = Circle1(5)
-circle.radius = 7   # Output: Setting radius...
+circle.radius = 7  # Output: Setting radius...
 print(circle.radius)  # Output: Getting radius... \n 7
 
-circle.radius = -3  # Output: Setting radius... \n ValueError: Radius cannot be negative.
+circle.radius = (
+    -3
+)  # Output: Setting radius... \n ValueError: Radius cannot be negative.
 
 
 """
@@ -126,9 +129,11 @@ class Circle2:
 circle = Circle2(5)
 print(circle.radius)  # Output: Getting radius... \n 5
 
-del circle.radius     # Output: Deleting radius...
+del circle.radius  # Output: Deleting radius...
 # Agora, se tentarmos acessar o atributo, receberemos um AttributeError, pois o atributo foi deletado.
-print(circle.radius)  # Output: AttributeError: 'Circle' object has no attribute '_radius'
+print(
+    circle.radius
+)  # Output: AttributeError: 'Circle' object has no attribute '_radius'
 
 # O uso dos decoradores @property, @<atributo>.setter, e @<atributo>.deleter permite que você tenha mais controle sobre
 # o acesso, atribuição e exclusão de atributos em suas classes, e ao mesmo tempo mantém uma interface limpa e fácil de
@@ -170,9 +175,11 @@ class Circle3:
 circle = Circle3(5)
 print(circle.radius)  # Output: Getting radius... \n 5
 
-circle.radius = 7    # Output: Setting radius...
+circle.radius = 7  # Output: Setting radius...
 print(circle.radius)  # Output: Getting radius... \n 7
 
-del circle.radius     # Output: Deleting radius...
+del circle.radius  # Output: Deleting radius...
 # Agora, se tentarmos acessar o atributo, receberemos um AttributeError, pois o atributo foi deletado.
-print(circle.radius)  # Output: AttributeError: 'Circle' object has no attribute '_radius'
+print(
+    circle.radius
+)  # Output: AttributeError: 'Circle' object has no attribute '_radius'

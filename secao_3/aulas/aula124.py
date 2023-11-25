@@ -5,6 +5,7 @@ pode ter seus próprios valores para esses atributos, permitindo que você mante
 da classe.
 """
 
+
 # Exemplo 1
 class Estado:
     def __init__(self, total=1):
@@ -12,6 +13,7 @@ class Estado:
 
     def incrementar(self, incremento):
         self.total += incremento
+
 
 v1 = Estado()
 v2 = Estado()
@@ -27,32 +29,29 @@ class Camera:
     def __init__(self, nome, estado=False):
         self.nome = nome
         self.estado = estado
-        
-        
+
     def filmar(self):
         if self.estado:
-            print(f'{self.nome} já está filmando')
+            print(f"{self.nome} já está filmando")
             return
         self.estado = True
-        print(f'{self.nome} está filmando')
-    
-    
+        print(f"{self.nome} está filmando")
+
     def parar_de_filmar(self):
         if self.estado:
-            print(f'{self.nome} está parando de filmar')
+            print(f"{self.nome} está parando de filmar")
             self.estado = False
             return
-        print(f'{self.nome} não está filmando')
-        
-        
+        print(f"{self.nome} não está filmando")
+
     def fotografar(self):
         if not self.estado:
-            print(f'{self.nome} está fotografando')
+            print(f"{self.nome} está fotografando")
             return
-        print(f'{self.nome} nao pode fotografar enquanto filma')
-        
+        print(f"{self.nome} nao pode fotografar enquanto filma")
 
-cam1 = Camera('Nokia')
+
+cam1 = Camera("Nokia")
 cam1.filmar()
 cam1.filmar()
 cam1.fotografar()

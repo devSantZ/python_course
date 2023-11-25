@@ -15,20 +15,21 @@ Classes filhas (Cliente)
 # class Foo(object):
 #   def __init__(self):
 #     pass
-  
+
 # help(Foo)
 
+
 class Pessoa:
-    cpf = '312.591.944-21'
+    cpf = "312.591.944-21"
 
     def __init__(self, nome, sobrenome):
         self.nome = nome
         self.sobrenome = sobrenome
-    
+
     def falar_nome_da_classe(self):
-        print(f'{self.__class__.__name__}: {self.nome} {self.sobrenome}')
-    
-  
+        print(f"{self.__class__.__name__}: {self.nome} {self.sobrenome}")
+
+
 class Cliente(Pessoa):
     cpf = 3212
     pass
@@ -38,11 +39,11 @@ class Aluno(Pessoa):
     pass
 
 
-c1 = Cliente('Carlos', 'Costa')
+c1 = Cliente("Carlos", "Costa")
 c1.falar_nome_da_classe()
-a1 = Aluno('Maria', 'Pinheiro')
+a1 = Aluno("Maria", "Pinheiro")
 a1.falar_nome_da_classe()
-print(f'{c1.cpf}\n{a1.cpf}')
+print(f"{c1.cpf}\n{a1.cpf}")
 # help(Cliente)
 
 """

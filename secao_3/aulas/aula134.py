@@ -31,15 +31,15 @@ class FerramentaEscrever:
         self.nome = nome
 
     def escrever(self):
-        return f'{self.nome} para escrever'
+        return f"{self.nome} para escrever"
 
 
-escritor = Escritor('Santz')
-escritor2 = Escritor('Cauã')
-lapis = FerramentaEscrever('Lapis preto')
-caneta = FerramentaEscrever('Caneta Vermelha')
+escritor = Escritor("Santz")
+escritor2 = Escritor("Cauã")
+lapis = FerramentaEscrever("Lapis preto")
+caneta = FerramentaEscrever("Caneta Vermelha")
 escritor.ferramenta = caneta
 escritor2.ferramenta = lapis
 
-print(f'{escritor2.nome} está usando {escritor.ferramenta.escrever()}')
-print(f'{escritor.nome} está usando {escritor.ferramenta.escrever()}')
+print(f"{escritor2.nome} está usando {escritor.ferramenta.escrever()}")
+print(f"{escritor.nome} está usando {escritor.ferramenta.escrever()}")

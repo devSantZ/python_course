@@ -36,14 +36,14 @@ class Pontecension:
 
     @property
     def square(self, pot=2):
-        return self.value ** pot
+        return self.value**pot
 
     @property
     def cube(self, pot=3):
-        return self.value ** pot
+        return self.value**pot
 
 
-caneta = Caneta('Preto')
+caneta = Caneta("Preto")
 print(caneta.get_cor)
 
 n1 = Pontecension(5)
@@ -69,7 +69,7 @@ class Circle:
 
     @property
     def area(self):
-        return 3.14 * self._radius ** 2
+        return 3.14 * self._radius**2
 
     @property
     def circumference(self):

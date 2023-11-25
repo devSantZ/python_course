@@ -8,6 +8,7 @@
 # Obs.: Um fabricante pode fabricar vários carros
 # Exiba o nome do carro, motor e fabricante na tela
 
+
 class Carro:
     def __init__(self, nome):
         self.nome = nome
@@ -17,11 +18,13 @@ class Carro:
         self.motor = []
 
     def exibir_caracteristicas(self, motor):
-        print(f'nome: {self.nome}\n'
-              f'marca: {self.marca}\n'
-              f'trasmissão: {self.transmissao}\n'
-              f'direção: {self.direcao}\n'
-              f'motor: {Motor.caracter_motor(motor)}')
+        print(
+            f"nome: {self.nome}\n"
+            f"marca: {self.marca}\n"
+            f"trasmissão: {self.transmissao}\n"
+            f"direção: {self.direcao}\n"
+            f"motor: {Motor.caracter_motor(motor)}"
+        )
 
     def insert_motor(self, potencia, cilindros):
         self.motor.append(Motor(potencia, cilindros))
@@ -57,7 +60,7 @@ class Motor:
         self.cilindros = cilindros
 
     def caracter_motor(self):
-        return f'{self.cilindros, self.pontencia}'
+        return f"{self.cilindros, self.pontencia}"
 
 
 class Fabrincante:
@@ -65,30 +68,26 @@ class Fabrincante:
         self.fabricante = fabricante
 
 
-
-
-fabricante1 = Fabrincante('Mercedes')
-motor1 = Motor('150 cv', '4 em linha')
-carro1 = Carro('Mercedes Benz Classe C')
+fabricante1 = Fabrincante("Mercedes")
+motor1 = Motor("150 cv", "4 em linha")
+carro1 = Carro("Mercedes Benz Classe C")
 carro1.marca = fabricante1.fabricante
-carro1.transmissao = 'Automático de 9 marchas'
-carro1.direcao = 'Elétrica'
+carro1.transmissao = "Automático de 9 marchas"
+carro1.direcao = "Elétrica"
 carro1.exibir_caracteristicas(motor1)
 print()
-fabricante2 = Fabrincante('BMW')
-motor2 = Motor('600 cv', '4')
-carro2 = Carro('M5 Series')
+fabricante2 = Fabrincante("BMW")
+motor2 = Motor("600 cv", "4")
+carro2 = Carro("M5 Series")
 carro2.marca = fabricante2.fabricante
-carro2.transmissao = '5 manuais'
-carro2.direcao = 'Manual'
+carro2.transmissao = "5 manuais"
+carro2.direcao = "Manual"
 carro2.exibir_caracteristicas(motor2)
 print()
-fabricante3 = Fabrincante('Fiat')
-motor3 = Motor('100 cv', '4 em Linha')
-carro3 = Carro('Uno Mille Fire  ')
+fabricante3 = Fabrincante("Fiat")
+motor3 = Motor("100 cv", "4 em Linha")
+carro3 = Carro("Uno Mille Fire  ")
 carro3.marca = fabricante3.fabricante
-carro3.transmissao = '5 manuais'
-carro3.direcao = 'Manual'
+carro3.transmissao = "5 manuais"
+carro3.direcao = "Manual"
 carro3.exibir_caracteristicas(motor3)
-
-

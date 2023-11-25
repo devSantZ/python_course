@@ -19,15 +19,15 @@ class OutroError(Exception):
 
 
 def levantar_excecao():
-    _exeception = MeuError('erro da minha classe')
+    _exeception = MeuError("erro da minha classe")
     raise _exeception
+
 
 try:
     levantar_excecao()
-    
+
 except (MeuError, ZeroDivisionError) as error:
-    print(f'{error.__class__.__name__}: {error}')
-    print(28*"= ")
-    _exeception = OutroError('erro da minha outra classe')
+    print(f"{error.__class__.__name__}: {error}")
+    print(28 * "= ")
+    _exeception = OutroError("erro da minha outra classe")
     raise _exeception from error
-    

@@ -22,8 +22,7 @@ class Exemplo1:
 
 
 class Exemplo2:
-
-    atributo_da_classe = 'Este atributo é da classe '
+    atributo_da_classe = "Este atributo é da classe "
 
     def __init__(self):
         pass
@@ -40,7 +39,7 @@ class Exemplo3:
 
     @classmethod
     def pessoa_sem_nome(cls, idade):
-        return cls('Anônima', idade)
+        return cls("Anônima", idade)
 
 
 # Exemplo classe 1
@@ -54,12 +53,9 @@ print(Exemplo1.get_instance_count())
 
 # Exemplo classe 2
 print(Exemplo2.atributo_da_classe)
-print(Exemplo2.concatenacao('palavra aleatoria'))
+print(Exemplo2.concatenacao("palavra aleatoria"))
 
 # Exemplo classe 3
 p1 = Exemplo3.pessoa_sem_nome(30)
-p2 = Exemplo3('carlos', 21)
+p2 = Exemplo3("carlos", 21)
 print(p2.nome)
-
-
-

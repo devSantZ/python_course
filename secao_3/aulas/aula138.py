@@ -6,38 +6,38 @@ A função super() em Python é usada para acessar métodos e atributos de uma c
 
 class MinhaString(str):
     def upper(self):
-        print('CHAMOU UPPER!')
+        print("CHAMOU UPPER!")
         return super().upper()
         # return super(MinhaString, self).upper()
 
 
-string = MinhaString('diego')
+string = MinhaString("diego")
 print(string.upper())
 
 
 class A(object):
-    atributo_a = 'valor a'
+    atributo_a = "valor a"
 
     def __init__(self, atributo):
         self.atributo = atributo
 
     def metodo(self):
-        print('A')
+        print("A")
 
 
 class B(A):
-    atributo_b = 'valor b'
+    atributo_b = "valor b"
 
     def __init__(self, atributo, outra_coisa):
         super().__init__(atributo)
         self.outra_coisa = outra_coisa
 
     def metodo(self):
-        print('B')
+        print("B")
 
 
 class C(B):
-    atributo_c = 'valor c'
+    atributo_c = "valor c"
 
     def __init__(self, *args, **kwargs):
         # print('EI, burlei o sistema.')
@@ -49,13 +49,13 @@ class C(B):
         # super(A, self).metodo()  # object
         A.metodo(self)
         B.metodo(self)
-        print('C')
+        print("C")
 
 
 # print(C.mro())
 # print(B.mro())
 # print(A.mro())
-c = C('Atributo', 'Qualquer')
+c = C("Atributo", "Qualquer")
 # print(c.atributo)
 # print(c.outra_coisa)
 c.metodo()
