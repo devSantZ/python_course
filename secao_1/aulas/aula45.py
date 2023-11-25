@@ -5,7 +5,7 @@ next -> me entregue o próximo valor
 iter -> me entregue seu iterador
 """
 # for letra in texto
-texto = 'Luiz'  # iterável
+texto = "Luiz"  # iterável
 
 # iteratador = iter(texto)  # iterator
 

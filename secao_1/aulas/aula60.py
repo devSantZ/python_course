@@ -6,15 +6,11 @@ tratando possíveis erros do algoritimo pro cpf
 import re
 import sys
 
-entrada = input('CPF: ')
-cpf_enviado_usuario = re.sub(
-    r'[^0-9]',
-    '',
-    entrada
-)
+entrada = input("CPF: ")
+cpf_enviado_usuario = re.sub(r"[^0-9]", "", entrada)
 entrada_sequencial = entrada == entrada[0] * len(entrada)
 if entrada_sequencial:
-    print('Voce usou caracteres sequenciais.')
+    print("Voce usou caracteres sequenciais.")
     sys.exit()
 
 
@@ -38,9 +34,9 @@ for digito in dez_digitos:
 digito_2 = (resultado_digito_2 * 10) % 11
 digito_2 = digito_2 if digito_2 <= 9 else 0
 
-cpf_gerado_pelo_calculo = f'{nove_digitos}{digito_1}{digito_2}'
+cpf_gerado_pelo_calculo = f"{nove_digitos}{digito_1}{digito_2}"
 
 if cpf_enviado_usuario == cpf_gerado_pelo_calculo:
-    print(f'{cpf_enviado_usuario} é válido')
+    print(f"{cpf_enviado_usuario} é válido")
 else:
-    print('CPF inválido')
+    print("CPF inválido")

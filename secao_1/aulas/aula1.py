@@ -7,7 +7,7 @@ quiser
 asdfasdfd
 """
 
-''' Usar para escrever suas notas '''
+""" Usar para escrever suas notas """
 
 # Permite escrever um comentário
 print(123)  # Na frente

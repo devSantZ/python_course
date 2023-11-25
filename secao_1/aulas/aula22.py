@@ -20,5 +20,5 @@
 #     print('Sair')
 
 # Avaliação de curto circuito
-senha = input('Senha: ') or 'Sem senha'
+senha = input("Senha: ") or "Sem senha"
 print(senha)
