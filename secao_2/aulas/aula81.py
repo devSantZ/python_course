@@ -26,10 +26,11 @@ resultado; caso contrário, é excluído.
 
 
 def func(x):
-    if len(x)>5:
+    if len(x) > 5:
         return x
-        
-lista = ['Diego', 'Jão', 'nomemuitogrande', 'i']
+
+
+lista = ["Diego", "Jão", "nomemuitogrande", "i"]
 filtro = list(filter(func, lista))
 
 print(filtro)
@@ -37,6 +38,7 @@ print(filtro)
 
 def maior_que_cinco(x):
     return x > 5
+
 
 numeros = [2, 8, 5, 10, 1, 6]
 resultado = filter(maior_que_cinco, numeros)

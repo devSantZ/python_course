@@ -41,6 +41,7 @@ problemas e tomar precauções adequadas para evitar comportamentos indesejados.
 #     lista.append(cliente)
 #     return lista
 
+
 # Forma correta
 def adiciona_clientes(cliente, lista=None):
     if lista is None:
@@ -48,14 +49,15 @@ def adiciona_clientes(cliente, lista=None):
     lista.append(cliente)
     return lista
 
-clientes1 = adiciona_clientes('pedro')
-adiciona_clientes('lucas', clientes1)
-adiciona_clientes('maria', clientes1)
-clientes1.append('eduardo')
 
-clientes2 = adiciona_clientes('marta')
-adiciona_clientes('caua', clientes2)
-adiciona_clientes('julio', clientes2)
-clientes2.append('murilo')
+clientes1 = adiciona_clientes("pedro")
+adiciona_clientes("lucas", clientes1)
+adiciona_clientes("maria", clientes1)
+clientes1.append("eduardo")
 
-print(clientes1, clientes2, sep='\n')
+clientes2 = adiciona_clientes("marta")
+adiciona_clientes("caua", clientes2)
+adiciona_clientes("julio", clientes2)
+clientes2.append("murilo")
+
+print(clientes1, clientes2, sep="\n")

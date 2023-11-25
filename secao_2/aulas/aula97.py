@@ -16,13 +16,12 @@ nos caminhos de sys.path
 #     sys.path.append('secao_2/aulas/aula97_modulo.py') # aplique o caminho do seu computador
 #     from aula97_modulo import varialvel
 #     print(varialvel)
-    
+
 # except ModuleNotFoundError as e:
 #     print(f'Módulo não encontrado, erro {e}')
-    
 
 
 # print(*sys.path, sep='\n')
 import aula97_modulo
 
-print('Este módulo se chama', __name__)
+print("Este módulo se chama", __name__)

@@ -12,7 +12,7 @@ x = 1
 
 def escopo():
     x = 2
-    
+
     def outra_funcao():
         global x
         x = 3

@@ -1,4 +1,3 @@
-
 # def soma(func):
 #     def inner(*args, **kwargs):
 #         result = func(*args, **kwargs)
@@ -76,10 +75,26 @@ for i, _ in enumerate(lista_b):
     lista_soma.append(lista_a[i] + lista_b[i])
 print(lista_soma)
 
+
 def soma(x, y):
     return x + y
+
 
 def zip(func, i1, i2):
     return map(func, i1, i2)
 
-print(list(zip(soma, [1, 2, 3, 4,], [5, 6, 7, 4])))
+
+print(
+    list(
+        zip(
+            soma,
+            [
+                1,
+                2,
+                3,
+                4,
+            ],
+            [5, 6, 7, 4],
+        )
+    )
+)

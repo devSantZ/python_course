@@ -33,18 +33,15 @@ def iterador(x):
             continue
         except StopIteration:
             return
-    
-    
-lista = [ 1, 2, 3, 4, 5, 6]
-tupla = ('Diego', 3, 5, True, 2.4, 'Python')
+
+
+lista = [1, 2, 3, 4, 5, 6]
+tupla = ("Diego", 3, 5, True, 2.4, "Python")
 dicionario = {
-    'nome': 'Lucas',
-    'sobrenome': 'Santos',
-    'idade': 32,
-    'endereco': [{
-        'rua1': 'Nomer1',
-        'rua2': 'Nomer2'
-        }]
+    "nome": "Lucas",
+    "sobrenome": "Santos",
+    "idade": 32,
+    "endereco": [{"rua1": "Nomer1", "rua2": "Nomer2"}],
 }
 
 teste = iterador(lista)

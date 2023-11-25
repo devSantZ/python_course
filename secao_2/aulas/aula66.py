@@ -6,7 +6,7 @@ por padrão, as funções rotornam None
 
 def soma(x, y):
     if x > 10:
-        return f'{x=}'
+        return f"{x=}"
     return x + y
 
 

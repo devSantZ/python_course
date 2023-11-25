@@ -15,11 +15,11 @@ lista = [
 ]
 """
 lista = [
-    {'nome': 'Luiz', 'sobrenome': 'miranda'},
-    {'nome': 'Maria', 'sobrenome': 'Oliveira'},
-    {'nome': 'Daniel', 'sobrenome': 'Silva'},
-    {'nome': 'Eduardo', 'sobrenome': 'Moreira'},
-    {'nome': 'Aline', 'sobrenome': 'Souza'},
+    {"nome": "Luiz", "sobrenome": "miranda"},
+    {"nome": "Maria", "sobrenome": "Oliveira"},
+    {"nome": "Daniel", "sobrenome": "Silva"},
+    {"nome": "Eduardo", "sobrenome": "Moreira"},
+    {"nome": "Aline", "sobrenome": "Souza"},
 ]
 
 
@@ -32,10 +32,10 @@ lista = [
 #     print(intens)
 
 
-lista.sort(key=lambda item: item['nome'])
+lista.sort(key=lambda item: item["nome"])
 for intens in lista:
     print(intens)
 
-l1 = sorted(lista, key=lambda item: item['sobrenome'])
+l1 = sorted(lista, key=lambda item: item["sobrenome"])
 for i in l1:
     print(i)

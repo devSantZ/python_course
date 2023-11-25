@@ -5,7 +5,8 @@ ou uma tupla. Ele retorna um valor inteiro representando a contagem.
 sintaxe basica: sequencia.count(elemento)
 
 """
-from itertools import count 
+from itertools import count
+
 # teste = count()
 
 # for i in teste:
@@ -14,14 +15,12 @@ from itertools import count
 #     print(i)
 
 
-frutas = ['banana', 'maçã', 'pera', 'uva', 'morango', 'abacaxi']
+frutas = ["banana", "maçã", "pera", "uva", "morango", "abacaxi"]
 
 # Conta quantas vezes a letra 'a' aparece em cada palavra da lista
-contagem = [(fruta, fruta.count('a')) for fruta in frutas]
-print(*contagem, sep='\n')
+contagem = [(fruta, fruta.count("a")) for fruta in frutas]
+print(*contagem, sep="\n")
 
 frase = "Olá, como você está?"
-contagem = frase.count('a')
-print(contagem) 
-
-
+contagem = frase.count("a")
+print(contagem)

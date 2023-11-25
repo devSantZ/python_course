@@ -8,20 +8,23 @@ de um gerador interno sem precisar iterar manualmente
 sobre ele.
 """
 
+
 def gerador_1():
     yield 1
     yield 2
     yield 3
     yield 4
-    yield 'gen 1'
-    
+    yield "gen 1"
+
+
 def gerador_2(parm):
     yield from gerador_1()
     yield 5
     yield 6
     yield 7
-    yield 'gen 2'
-    
+    yield "gen 2"
+
+
 # g1 = gerador_1()
 # for i in g1:
 #     print(i)
@@ -33,15 +36,16 @@ for i in g2:
 print()
 
 
-
 # Exemplo
 def gerador_interno():
     for i in range(1, 4):
         yield i
 
+
 def gerador_externo():
     yield from gerador_interno()
-    yield 'Final'
+    yield "Final"
+
 
 for valor in gerador_externo():
     print(valor)

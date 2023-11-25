@@ -13,8 +13,8 @@ dicionário.
 #
 # Exemplo:
 lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-   
-condicao_esquerda = lambda x: {x ** 2 if x % 2 == 0 else x**3 for x in x}
+
+condicao_esquerda = lambda x: {x**2 if x % 2 == 0 else x**3 for x in x}
 print(condicao_esquerda(lista))
 
 # A sintaxe do if a direita
@@ -23,9 +23,7 @@ print(condicao_esquerda(lista))
 
 # Exemplo
 condicao_direita = lambda x: {
-    x ** 2 if x % 2 == 0
-    else x**3 for x in x
-    if x ** 2 < 100 and x ** 3 < 100
-    }
+    x**2 if x % 2 == 0 else x**3 for x in x if x**2 < 100 and x**3 < 100
+}
 
 print(condicao_direita(lista))

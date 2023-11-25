@@ -49,6 +49,7 @@ outras funções com base em parâmetros.
 def cria_multiplo(fator):
     def multiplo(x):
         return x * fator
+
     return multiplo
 
 

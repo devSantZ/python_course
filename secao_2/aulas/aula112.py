@@ -71,31 +71,29 @@ os.rename('exemplo.txt', 'novo_nome.txt')
 import os
 
 
-caminho_arquivo = 'aula12.txt'
-with open(caminho_arquivo, 'w+', encoding='utf-8z') as arquivo:
-    arquivo.write('Linha 1\n')  # escreve uma linha
-    arquivo.write('Linha 2\n')
-    arquivo.writelines(
-        ('Linha 3\n', 'Linha 4\n')  # escreve várias linhas
-    )
+caminho_arquivo = "aula12.txt"
+with open(caminho_arquivo, "w+", encoding="utf-8z") as arquivo:
+    arquivo.write("Linha 1\n")  # escreve uma linha
+    arquivo.write("Linha 2\n")
+    arquivo.writelines(("Linha 3\n", "Linha 4\n"))  # escreve várias linhas
     arquivo.seek(0, 0)
     print(arquivo.read())
 
-    print('Lendo')
+    print("Lendo")
     arquivo.seek(0, 0)
-    print(arquivo.readline(), end='')
+    print(arquivo.readline(), end="")
     print(arquivo.readline().strip())
     print(arquivo.readline().strip())
 
-    print('READLINES')
+    print("READLINES")
     arquivo.seek(0, 0)
     for linha in arquivo.readlines():
         print(linha.strip())
 
 
-print('#' * 10)
+print("#" * 10)
 
-with open(caminho_arquivo, 'r') as arquivo:
+with open(caminho_arquivo, "r") as arquivo:
     print(arquivo.read())
 
 # os.remove(caminho_arquivo) apaga o arquivo
@@ -110,15 +108,14 @@ path_file = "aula112.txt"
 
 def open_file():
     try:
-        with open(path_file, 'r') as way:
-            print('ok, arquivo criado')
+        with open(path_file, "r") as way:
+            print("ok, arquivo criado")
         return
     except:
-        with open(path_file, 'w') as way:
-            print('Criando o arquivo')
+        with open(path_file, "w") as way:
+            print("Criando o arquivo")
             sleep(2)
         return open_file()
 
 
 open_file()
-

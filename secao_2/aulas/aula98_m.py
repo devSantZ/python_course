@@ -1,3 +1,3 @@
-var = 'Teste'
+var = "Teste"
 
 print(123)

@@ -24,21 +24,21 @@ vezes que cada elemento dos iteráveis será repetido.
 from itertools import permutations, combinations, product
 
 pessoas = [
-    ['João', 'Marcos', 'Caio', 'Diego'],
-    ['Maria', 'Luana', 'Isa', 'Marta'],
-    ['Noite', 'Dia']
+    ["João", "Marcos", "Caio", "Diego"],
+    ["Maria", "Luana", "Isa", "Marta"],
+    ["Noite", "Dia"],
 ]
 
-lista = ['Ana', 'Pedro', 'João', 'Caio', 'Marcio']
+lista = ["Ana", "Pedro", "João", "Caio", "Marcio"]
 
 # Permutation
-print('Permutação')
-print(*list(permutations(lista, 2)), sep='\n')
+print("Permutação")
+print(*list(permutations(lista, 2)), sep="\n")
 
 # Combination
-print('Combinação')
-print(*list(combinations(lista, 2)), sep='\n')
+print("Combinação")
+print(*list(combinations(lista, 2)), sep="\n")
 
 # Product
-print('Product')
-print(*list(product(*pessoas)), sep='\n')
+print("Product")
+print(*list(product(*pessoas)), sep="\n")

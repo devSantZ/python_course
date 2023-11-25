@@ -4,19 +4,19 @@ Sistema de perguntas e respostas com dicionários
 
 perguntas = [
     {
-        'Pergunta': 'Quanto é 2+2?',
-        'Opções': ['1', '3', '4', '5'],
-        'Resposta': '4',
+        "Pergunta": "Quanto é 2+2?",
+        "Opções": ["1", "3", "4", "5"],
+        "Resposta": "4",
     },
     {
-        'Pergunta': 'Quanto é 5*5?',
-        'Opções': ['25', '55', '10', '51'],
-        'Resposta': '25',
+        "Pergunta": "Quanto é 5*5?",
+        "Opções": ["25", "55", "10", "51"],
+        "Resposta": "25",
     },
     {
-        'Pergunta': 'Quanto é 10/2?',
-        'Opções': ['4', '5', '2', '1'],
-        'Resposta': '5',
+        "Pergunta": "Quanto é 10/2?",
+        "Opções": ["4", "5", "2", "1"],
+        "Resposta": "5",
     },
 ]
 
@@ -26,24 +26,26 @@ acertos = 0
 erros = 0
 
 for i in perguntas:
-    pergunta = (perguntas[indice_pergunta].get('Pergunta'))
-    opcoes = (perguntas[indice_pergunta].get('Opções'))
-    resposta = (perguntas[indice_pergunta].get('Resposta'))
+    pergunta = perguntas[indice_pergunta].get("Pergunta")
+    opcoes = perguntas[indice_pergunta].get("Opções")
+    resposta = perguntas[indice_pergunta].get("Resposta")
     print(pergunta)
     for j, k in enumerate(opcoes):
-        print(f'{j}) {k}')
+        print(f"{j}) {k}")
 
     indice_pergunta += 1
     indice_opcoes = 0
-    user = int(input('Escolha uma opção: '))
+    user = int(input("Escolha uma opção: "))
     if opcoes[user] == resposta:
-        print('acertou')
+        print("acertou")
         acertos += 1
     else:
-        print('Errou')
+        print("Errou")
         erros += 1
 
-print(f'voce acertou {acertos} perguntas de um total de {len(perguntas)} e errou {erros}x')
+print(
+    f"voce acertou {acertos} perguntas de um total de {len(perguntas)} e errou {erros}x"
+)
 
 
 # com funcoes

@@ -18,7 +18,7 @@ def param(value):
     return duble_value, triple_value, quadruple_value
 
 
-user = int(input('Numero: '))
+user = int(input("Numero: "))
 number = param(user)
 duble_value, triple_value, quadruple_value = number
 print(duble_value(number))

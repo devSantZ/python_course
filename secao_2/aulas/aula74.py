@@ -5,8 +5,8 @@ popitem - Apaga o último item adicionado
 update - Atualiza um dicionário com outro
 """
 p1 = {
-    'nome': 'Diego',
-    'sobrenome': 'Santos',
+    "nome": "Diego",
+    "sobrenome": "Santos",
 }
 # get()
 # print('usando "get()"', p1.get('nome', '0'))  # 0 será exibido caso não exista a chave na lista
@@ -22,13 +22,12 @@ p1 = {
 # print(p1)
 
 # update
-p2 = {
-    'idade': 21
-}
+p2 = {"idade": 21}
 p1.update(p2)
-p1.update({
-    'raça': 'Pardo',
-    'altura': 1.68,
-})
+p1.update(
+    {
+        "raça": "Pardo",
+        "altura": 1.68,
+    }
+)
 print(p1)
-    

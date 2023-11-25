@@ -14,13 +14,13 @@ Mutável: dict, list
 """
 
 pessoa = {
-    'nome': 'Diego',
-    'sobrenome': 'Santos',
-    'idade': 18,
-    'altura': 1.8,
-    'endereços': [
-        {'rua': 'tal tal', 'número': 123},
-        {'rua': 'outra rua', 'número': 321},
-    ]
+    "nome": "Diego",
+    "sobrenome": "Santos",
+    "idade": 18,
+    "altura": 1.8,
+    "endereços": [
+        {"rua": "tal tal", "número": 123},
+        {"rua": "outra rua", "número": 321},
+    ],
 }
 print(pessoa.keys(), type(pessoa))

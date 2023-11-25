@@ -4,19 +4,19 @@
 import json
 
 pessoa = {
-    'nome': 'Diego ',
-    'sobrenome': 'Santos    ',
-    'enderecos': [
-        {'rua': 'R1', 'numero': 32},
-        {'rua': 'R2', 'numero': 55},
+    "nome": "Diego ",
+    "sobrenome": "Santos    ",
+    "enderecos": [
+        {"rua": "R1", "numero": 32},
+        {"rua": "R2", "numero": 55},
     ],
-    'altura': 1.8,
-    'numeros_preferidos': (2, 4, 6, 8, 10),
-    'dev': True,
-    'nada': None,
+    "altura": 1.8,
+    "numeros_preferidos": (2, 4, 6, 8, 10),
+    "dev": True,
+    "nada": None,
 }
 
-with open('aula114.json', 'w', encoding='utf8') as arquivo:
+with open("aula114.json", "w", encoding="utf8") as arquivo:
     json.dump(
         pessoa,
         arquivo,
@@ -24,7 +24,7 @@ with open('aula114.json', 'w', encoding='utf8') as arquivo:
         indent=2,
     )
 
-with open('aula114.json', 'r', encoding='utf8') as arquivo:
+with open("aula114.json", "r", encoding="utf8") as arquivo:
     pessoa = json.load(arquivo)
     # print(pessoa)
     # print(type(pessoa))

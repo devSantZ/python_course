@@ -7,9 +7,10 @@ lista = [i for i in range(10)]
 print(lista)
 
 
-def mult(x=1, y = 0):
-    valores = [i*x for i in range(y)]
+def mult(x=1, y=0):
+    valores = [i * x for i in range(y)]
     return valores
+
 
 teste = mult(3, 10)
 print(teste)

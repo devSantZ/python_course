@@ -1,3 +1,3 @@
-varialvel = 'estou no aula97_modulo'
+varialvel = "estou no aula97_modulo"
 
-print('Este módulo se chama', __name__)
+print("Este módulo se chama", __name__)

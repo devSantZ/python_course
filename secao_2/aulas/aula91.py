@@ -3,14 +3,16 @@ Introdução às Generator functions em Python
 Generator functions são funções que podem pausar
 """
 
+
 def gerador(n=0):
     yield 1
-    print('oi y1')
+    print("oi y1")
     yield 2
-    print('oi y2')
+    print("oi y2")
     yield 3
-    print('oi y3')
-    return f'{n}, acabouu'
+    print("oi y3")
+    return f"{n}, acabouu"
+
 
 gen = gerador(2)
 # print(next(gen)) # -> Primeiro yield
@@ -27,15 +29,18 @@ faz o laço for.
 for i in gen:
     print(i)
 
+
 # Exemplo 1
 def func_generator(*args):
     while True:
         yield args
         break
 
-ex = func_generator('oi', 'pedro', 'arthur')
+
+ex = func_generator("oi", "pedro", "arthur")
 for i in ex:
-    print('\n'.join(i))
+    print("\n".join(i))
+
 
 # Exemplo 2
 def generator_pares(n):

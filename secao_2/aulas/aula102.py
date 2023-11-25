@@ -9,7 +9,9 @@ def fabrica_de_decoradores(a=None, b=None, c=None):
         def aninhada(*args, **kwargs):
             resul = func(*args, **kwargs)
             return resul
+
         return aninhada
+
     return decoradora
 
 
@@ -23,9 +25,11 @@ def imposto_em_porcentagem(x):
     def imposto(func):
         def inner_function(*args, **kwargs):
             result = func(*args, **kwargs)
-            result += (result * x)
+            result += result * x
             return result
+
         return inner_function
+
     return imposto
 
 
@@ -35,4 +39,3 @@ def soma(x, y):
 
 
 print(soma(5, 5))
-

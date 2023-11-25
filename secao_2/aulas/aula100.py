@@ -9,14 +9,18 @@ acessar variáveis em um escopo superior dentro de funções internas ou
 aninhadas em Python.
 """
 
+
 # Exemplo 1
 def func_de_fora():
     variavel_de_fora = "Hello "
+
     def func_de_dentro():
         nonlocal variavel_de_fora
         variavel_de_fora += "World"
         return variavel_de_fora
+
     return func_de_dentro()
+
 
 test1 = func_de_fora()
 print(test1)
@@ -24,13 +28,14 @@ print(test1)
 
 def valor_inicial(x):
     valor = x
-    print(locals(), 'locals de valor_inicial')
-    
+    print(locals(), "locals de valor_inicial")
+
     def valores_secundarios(y):
         nonlocal valor
         valor += y
-        print(locals(), 'locals de valores_secundarios')
+        print(locals(), "locals de valores_secundarios")
         return valor
+
     return valores_secundarios
 
 

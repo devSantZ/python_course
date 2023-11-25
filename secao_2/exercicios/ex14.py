@@ -20,12 +20,12 @@ def par(*args):
     numeros_impares = []
     for i in args:
         if i % 2 == 0:
-            print(f'{i} é par')
+            print(f"{i} é par")
             numeros_pares.append(i)
         else:
-            print(f'{i} é impar')
+            print(f"{i} é impar")
             numeros_impares.append(i)
-    return f'NUMEROS PARES = {numeros_pares}\nNUMEROS IMPARES = {numeros_impares}'
+    return f"NUMEROS PARES = {numeros_pares}\nNUMEROS IMPARES = {numeros_impares}"
 
 
 conta1 = multiplica(1, 2, 3, 4, 10)

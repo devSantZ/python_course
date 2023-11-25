@@ -23,12 +23,12 @@ print("\n".join(teste))
 
 
 # Exemplo hasattr()
-valor = 'String'
-if hasattr(valor, 'upper'):
-    print(f'o método upper existe pra {valor}')
+valor = "String"
+if hasattr(valor, "upper"):
+    print(f"o método upper existe pra {valor}")
 else:
-    print('o método não existe')
-    
+    print("o método não existe")
+
 # Exemplo getarrt()
-metodo = 'lower'
+metodo = "lower"
 print(getattr(valor, metodo)())

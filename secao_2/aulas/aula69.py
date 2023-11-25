@@ -13,14 +13,15 @@
 # Executando a função (sauda_nome) depois (usando closure)
 def saudar(saudacao):
     def sauda_nome(nome):
-        return f'{saudacao} {nome}!'
+        return f"{saudacao} {nome}!"
+
     return sauda_nome
 
 
-puto_com_user = saudar('wtf')
-deboa_com_user = saudar('salve meu mano')
-print(puto_com_user('Pedro'))
-print(deboa_com_user('Diego'))
+puto_com_user = saudar("wtf")
+deboa_com_user = saudar("salve meu mano")
+print(puto_com_user("Pedro"))
+print(deboa_com_user("Diego"))
 
 # Executando a função antes (sem closure)
 # def saudar(saudacao):

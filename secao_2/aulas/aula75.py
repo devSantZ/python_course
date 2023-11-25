@@ -30,12 +30,12 @@ add, update, clear, discard
 """
 
 s1 = set()
-s1.add('Luiz')
+s1.add("Luiz")
 s1.add(1)
-s1.update(('Olá mundo', 1, 2, 3, 4))
+s1.update(("Olá mundo", 1, 2, 3, 4))
 # s1.clear()
-s1.discard('Olá mundo')
-s1.discard('Luiz')
+s1.discard("Olá mundo")
+s1.discard("Luiz")
 print(s1)
 print(s1)
 """
@@ -54,29 +54,29 @@ s3 = s1 ^ s2
 print(s3)
 
 
-
-
 # ============  EXEMPLOS ============
-frutas = {'maçã', 'banana', 'laranja'}
+frutas = {"maçã", "banana", "laranja"}
 # Adicionando elementos a um conjunto
-frutas.add('abacaxi')
+frutas.add("abacaxi")
 
 # Verificando a existência de um elemento em um conjunto
-existe_banana = 'banana' in frutas
+existe_banana = "banana" in frutas
 
 #     Removendo um elemento de um conjunto
-frutas.remove('maçã')
+frutas.remove("maçã")
 
 # Iterando sobre um conjunto:
 for fruta in frutas:
     print(fruta)
 
 # Realizando operações entre conjuntos
-frutas1 = {'maçã', 'banana', 'laranja'}
-frutas2 = {'banana', 'abacaxi', 'uva'}
+frutas1 = {"maçã", "banana", "laranja"}
+frutas2 = {"banana", "abacaxi", "uva"}
 
 uniao = frutas1.union(frutas2)  # união de conjuntos (sem duplicação)
-intersecao = frutas1.intersection(frutas2)  # interseção de conjuntos, (o que tem em ambas)
+intersecao = frutas1.intersection(
+    frutas2
+)  # interseção de conjuntos, (o que tem em ambas)
 diferenca = frutas1.difference(frutas2)  # diferença entre conjuntos
-print(f'{frutas1}\n{frutas2}')
-print(f'{uniao = }\n{intersecao = }\n{diferenca = }')
+print(f"{frutas1}\n{frutas2}")
+print(f"{uniao = }\n{intersecao = }\n{diferenca = }")

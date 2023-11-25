@@ -14,19 +14,21 @@ def criar_func(func):
             e_string(arg)
             resultado = func(*args, **kwargs)
         return resultado
+
     return interna
 
 
 def e_string(valor):
     if not isinstance(valor, str):
-        raise TypeError('valor tem que ser uma string!')
+        raise TypeError("valor tem que ser uma string!")
 
 
 @criar_func
 def inverte(valor):
     return valor[::-1]
 
-invertida = inverte('olá')
+
+invertida = inverte("olá")
 print(invertida)
 
 
@@ -36,10 +38,11 @@ def is_positive_or_negative(func):
         result = func(*args, **kwargs)
         for i in result:
             if i > 0:
-                print(f'{i} É um numero positivo')
+                print(f"{i} É um numero positivo")
             else:
-                print(f'{i} É um numero negativo')
-        return f''
+                print(f"{i} É um numero negativo")
+        return f""
+
     return inner
 
 

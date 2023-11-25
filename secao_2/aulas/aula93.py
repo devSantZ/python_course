@@ -31,13 +31,12 @@ try:
     # i = c[3]
     a = 10
     b = 0
-    c = a/b
+    c = a / b
     print(c)
-    
+
 except ZeroDivisionError as error:
-    print(error.__class__.__name__, error) 
+    print(error.__class__.__name__, error)
 except NameError:
     print('Nome "c" não está definido!')
 except IndexError:
-    print('O index está fora do range da lista!')
-
+    print("O index está fora do range da lista!")

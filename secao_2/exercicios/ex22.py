@@ -15,13 +15,14 @@ import os
 lista_de_tarefas = []
 lista_de_tarefas_refeitas = []
 
+
 def limpar():
-    return os.system('clear')
+    return os.system("clear")
 
 
 def exibir_tarefas():
     if len(lista_de_tarefas) == 0:
-        print('Nada para listar')
+        print("Nada para listar")
         return
     for i in lista_de_tarefas:
         print(i)
@@ -42,21 +43,21 @@ def refazer():
     return lista_de_tarefas.append(var)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     while True:
-        print('Comandos: listar, desfazer, refazer')
-        entrada_usuario = input('Digite uma tarefa ou comando: ').lower()
+        print("Comandos: listar, desfazer, refazer")
+        entrada_usuario = input("Digite uma tarefa ou comando: ").lower()
 
-        if entrada_usuario == 'listar':
+        if entrada_usuario == "listar":
             exibir_tarefas()
 
-        elif entrada_usuario == 'desfazer':
+        elif entrada_usuario == "desfazer":
             desfazer()
 
-        elif entrada_usuario == 'refazer':
+        elif entrada_usuario == "refazer":
             refazer()
 
-        elif entrada_usuario == 'clear':
+        elif entrada_usuario == "clear":
             limpar()
 
         else:
