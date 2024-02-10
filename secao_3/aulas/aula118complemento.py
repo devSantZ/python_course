@@ -31,3 +31,4 @@ car1.marca = "Ford"
 car1.modelo = "Ranger"
 
 print(car1.marca, car1.modelo)
+
